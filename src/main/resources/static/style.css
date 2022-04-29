@@ -1,0 +1,107 @@
+
+.tableofcontent {
+    color: white;
+    font: 18px bold;
+    font-style: initial;
+    margin-top: 40px;
+
+
+}
+
+
+* {
+    font-family: 'Arima Madurai', cursive;
+
+}
+
+aside a {
+
+    color: white;
+    text-decoration: none;
+
+}
+
+footer {
+
+    background-color: #242527;
+    height: 75px;
+}
+
+
+
+
+
+h3 {
+    margin-right: 9px;
+
+    background-color: aqua;
+}
+
+.hadingfont {
+    font-family: 'Bungee', cursive;
+}
+
+
+
+aside::ul::li {
+    margin-top: 30px;
+}
+
+aside a:hover {
+    padding: 1px;
+    background-color: aqua;
+    color: black;
+}
+
+
+
+.currenttopic {
+    padding: 1px;
+    background-color: aqua;
+    color: black;
+}
+
+.sticky {
+    margin-top: 0px;
+    top: 0;
+
+}
+
+li ul a:hover {
+    padding: 1px;
+    background-color: aqua;
+    color: black;
+}
+
+pre{
+    background-color: #242527;
+    border: 1px solid black;
+    color: navajowhite;
+}
+
+code{
+    
+    color: #f70018;
+}
+
+
+aside {
+    position: absolute;
+    pointer-events: auto;
+    display: flex;
+    width: 27%;
+    max-width: 30%/.9;
+    height: 100%;
+    overflow-y: auto;
+    padding-left: 12px;
+    padding-right: 1rem;
+    z-index: 199;
+    flex-direction: column;
+    background-color: #242527;
+    color: rgb(146, 20, 20);
+}
+
+
+.newheight {
+    height: 87.5%;
+}

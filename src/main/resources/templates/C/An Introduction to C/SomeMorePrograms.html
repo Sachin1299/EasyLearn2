@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@500&family=Bungee&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>C: Some More Programs</title>
+
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand hadingfont" href="#">EasyLearn</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown ps-3 pe-3">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            C
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item " style="color: white;" href="#">C</a></li>
+                            <li><a class="dropdown-item " style="color: white;" href="#">C++</a></li>
+                            <li><a class="dropdown-item " style="color: white;" href="#">Java</a></li>
+                            <li><a class="dropdown-item " style="color: white;" href="#">Python</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link   " aria-current="page" href="#">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <div class="mx-2">
+                    <button type="button" class="btn btn-danger ">Log Out</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <aside id="asidebar" class="oldheight">
+        <nav>
+            <h3 id="TOC" class="hadingfont text-center">Table of Contents</h3>
+            <ul class="list-group tableofcontent">
+                <li><a href="/TheFormOfACProgram" class="d-inline-flex align-items-center rounded"> An Introduction
+                        to C</a>
+                    <ul>
+                        <li><a href="/TheFormOfACProgram" class="d-inline-flex align-items-center rounded "> The
+                                form of a C
+                                program</a>
+                        </li>
+                        <li><a href="/Functions" class="d-inline-flex align-items-center rounded"> Functions</a>
+                        </li>
+                        <li><a href="/ADescriptionOfExample" class="d-inline-flex align-items-center rounded"> A
+                                description of Example
+                            </a>
+                        </li>
+                        <li><a href="/SomeMorePrograms"
+                                class="d-inline-flex align-items-center rounded currenttopic"> Some more
+                                programs</a></li>
+                        <li><a href="/Terminology" class="d-inline-flex align-items-center rounded">
+                                Terminology</a></li>
+                        <li><a href="/Summery" class="d-inline-flex align-items-center rounded"> Summary</a>
+                        </li>
+                        <li><a href="/Exercise1" class="d-inline-flex align-items-center rounded"> Exercises</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../Variables and Arithmetic/SomeFundamentals.html"
+                        class="d-inline-flex align-items-center rounded"> Variables and Arithmetic</a>
+                    <ul>
+                        <li><a href="../Variables and Arithmetic/SomeFundamentals.html"
+                                class="d-inline-flex align-items-center rounded">Some fundamentals</a></li>
+                        <li><a href="../Variables and Arithmetic/TheAlphabetOfC.html"
+                                class="d-inline-flex align-items-center rounded">The alphabet of&nbsp;C</a>
+                        </li>
+                        <li><a href="../Variables and Arithmetic/TheTextualStructureOfPrograms.html"
+                                class="d-inline-flex align-items-center rounded">The Textual Structure of
+                                Programs</a>
+                        </li>
+                        <li><a href="../Variables and Arithmetic/KeywordsAndIdentifiers.html"
+                                class="d-inline-flex align-items-center rounded">Keywords and identifiers</a>
+                        </li>
+                        <li><a href="../Variables and Arithmetic/DeclarationOfVariables.html"
+                                class="d-inline-flex align-items-center rounded">Declaration of variables</a>
+                        </li>
+                        <li><a href="../Variables and Arithmetic/RealTypes.html"
+                                class="d-inline-flex align-items-center rounded">Real types</a></li>
+                        <li><a href="../Variables and Arithmetic/IntegralTypes.html"
+                                class="d-inline-flex align-items-center rounded">Integral types</a></li>
+                        <li><a href="../Variables and Arithmetic/ExpressionAndArithmetic.html"
+                                class="d-inline-flex align-items-center rounded">Expressions and
+                                arithmetic</a>
+                        </li>
+                        <li><a href="../Variables and Arithmetic/Constants.html"
+                                class="d-inline-flex align-items-center rounded">Constants</a></li>
+                        <li><a href="../Variables and Arithmetic/Summery.html"
+                                class="d-inline-flex align-items-center rounded">Summary</a></li>
+                        <li><a href="../Variables and Arithmetic/Exercises.html"
+                                class="d-inline-flex align-items-center rounded">Exercises</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Control of Flow and Logical Expressions/TheTaskAhead.html"
+                        class="d-inline-flex align-items-center rounded"> Control of Flow and Logical
+                        Expressions</a>
+                    <ul>
+                        <li><a href="../Control of Flow and Logical Expressions/TheTaskAhead.html"
+                                class="d-inline-flex align-items-center rounded">The Task ahead</a></li>
+                        <li><a href="../Control of Flow and Logical Expressions/ControlOfFlow.html"
+                                class="d-inline-flex align-items-center rounded">Control of flow</a></li>
+                        <li><a href="../Control of Flow and Logical Expressions/MoreLogicalExpressions.html"
+                                class="d-inline-flex align-items-center rounded">More logical expressions</a>
+                        </li>
+                        <li><a href="../Control of Flow and Logical Expressions/StrangeOperators.html"
+                                class="d-inline-flex align-items-center rounded">Strange operators</a></li>
+                        <li><a href="../Control of Flow and Logical Expressions/Summery.html"
+                                class="d-inline-flex align-items-center rounded">Summary</a></li>
+                        <li><a href="../Control of Flow and Logical Expressions/Exercise.html"
+                                class="d-inline-flex align-items-center rounded">Exercises</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Functions/Changes.html" class="d-inline-flex align-items-center rounded"> Functions</a>
+                    <ul>
+                        <li><a href="../Functions/Changes.html" class="d-inline-flex align-items-center rounded">
+                                Changes</a></li>
+                        <li><a href="../Functions/TheTypeOfFunctions.html"
+                                class="d-inline-flex align-items-center rounded"> The type of functions</a>
+                        </li>
+                        <li><a href="../Functions/RecursionAndArgumentPassing.html"
+                                class="d-inline-flex align-items-center rounded"> Recursion and argument
+                                passing</a></li>
+                        <li><a href="../Functions/Linkage.html" class="d-inline-flex align-items-center rounded">
+                                Linkage</a></li>
+                        <li><a href="../Functions/Summery.html" class="d-inline-flex align-items-center rounded">
+                                Summary</a></li>
+                        <li><a href="../Functions/Exercises.html" class="d-inline-flex align-items-center rounded">
+                                Exercises</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Arrays and Pointers/OpeningShots.html" class="d-inline-flex align-items-center rounded">
+                        Arrays and Pointers</a>
+                    <ul>
+                        <li><a href="../Arrays and Pointers/OpeningShots.html"
+                                class="d-inline-flex align-items-center rounded">Opening shots</a></li>
+                        <li><a href="../Arrays and Pointers/Arrays.html"
+                                class="d-inline-flex align-items-center rounded">Arrays</a></li>
+                        <li><a href="../Arrays and Pointers/Pointers.html"
+                                class="d-inline-flex align-items-center rounded">Pointers</a></li>
+                        <li><a href="../Arrays and Pointers/CharacterHandling.html"
+                                class="d-inline-flex align-items-center rounded">Character handling</a></li>
+                        <li><a href="../Arrays and Pointers/SizeofAndStorageAllocation.html"
+                                class="d-inline-flex align-items-center rounded">Sizeof and storage
+                                allocation</a></li>
+                        <li><a href="../Arrays and Pointers/PointersToFunction.html"
+                                class="d-inline-flex align-items-center rounded">Pointers to functions</a>
+                        </li>
+                        <li><a href="../Arrays and Pointers/ExpressionInvolvingPointers.html"
+                                class="d-inline-flex align-items-center rounded">Expressions involving
+                                pointers</a></li>
+                        <li><a href="../Arrays and Pointers/ArraysThe&OperatorAndFunctionDeclaration.html"
+                                class="d-inline-flex align-items-center rounded">Arrays, the (and) operator and function
+                                declarations</a></li>
+                        <li><a href="../Arrays and Pointers/Summary.html"
+                                class="d-inline-flex align-items-center rounded">5.9. Summary</a></li>
+                        <li><a href="../Arrays and Pointers/Exercises.html"
+                                class="d-inline-flex align-items-center rounded">5.10. Exercises</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="../Structured Data Types/History.html" class="d-inline-flex align-items-center rounded">
+                        Structured Data Types</a>
+                    <ul>
+                        <li><a href="../Structured Data Types/History.html"
+                                class="d-inline-flex align-items-center rounded">History</a></li>
+                        <li><a href="../Structured Data Types/Structure.html"
+                                class="d-inline-flex align-items-center rounded">Structures</a></li>
+                        <li><a href="../Structured Data Types/Unions.html"
+                                class="d-inline-flex align-items-center rounded">Unions</a></li>
+                        <li><a href="../Structured Data Types/Bitfields.html"
+                                class="d-inline-flex align-items-center rounded">Bitfields</a></li>
+                        <li><a href="../Structured Data Types/Enums.html"
+                                class="d-inline-flex align-items-center rounded">Enums</a></li>
+                        <li><a href="../Structured Data Types/QualifiersAndDerivedTypes.html"
+                                class="d-inline-flex align-items-center rounded">Qualifiers and derived
+                                types</a>
+                        </li>
+                        <li><a href="../Structured Data Types/Initialization.html"
+                                class="d-inline-flex align-items-center rounded">Initialization</a></li>
+                        <li><a href="../Structured Data Types/Summary.html"
+                                class="d-inline-flex align-items-center rounded">Summary</a></li>
+                        <li><a href="../Structured Data Types/Exercises.html"
+                                class="d-inline-flex align-items-center rounded">Exercises</a></li>
+                    </ul>
+                </li>
+                <li><a href="../The Preprocessor/EffectOfTheStandard.html"
+                        class="d-inline-flex align-items-center rounded"> The Preprocessor</a>
+                    <ul>
+                        <li><a href="../The Preprocessor/EffectOfTheStandard.html"
+                                class="d-inline-flex align-items-center rounded">Effect of the Standard</a>
+                        </li>
+                        <li><a href="../The Preprocessor/HowThePreProcessorWorks.html"
+                                class="d-inline-flex align-items-center rounded">How the preprocessor
+                                works</a>
+                        </li>
+                        <li><a href="../The Preprocessor/Directives.html"
+                                class="d-inline-flex align-items-center rounded">Directives</a></li>
+                        <li><a href="../The Preprocessor/Summary.html"
+                                class="d-inline-flex align-items-center rounded">Summary</a></li>
+                        <li><a href="../The Preprocessor/Exercises.html"
+                                class="d-inline-flex align-items-center rounded">Exercises</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Specialized Areas of C/GovermentHealthWarning.html"
+                        class="d-inline-flex align-items-center rounded"> Specialized Areas of C</a>
+                    <ul>
+                        <li><a href="../Specialized Areas of C/GovermentHealthWarning.html"
+                                class="d-inline-flex align-items-center rounded">Government Health
+                                Warning</a>
+                        </li>
+                        <li><a href="../Specialized Areas of C/DeclarationDefinationAndAccessibility.html"
+                                class="d-inline-flex align-items-center rounded">Declarations, Definitions
+                                and
+                                Accessibility</a></li>
+                        <li><a href="../Specialized Areas of C/Typedef.html"
+                                class="d-inline-flex align-items-center rounded">Typedef</a>
+                        </li>
+                        <li><a href="../Specialized Areas of C/ConstAndVolatile.html"
+                                class="d-inline-flex align-items-center rounded">Const and
+                                volatile</a></li>
+                        <li><a href="../Specialized Areas of C/SequencePoints.html"
+                                class="d-inline-flex align-items-center rounded">Sequence points</a></li>
+                        <li><a href="../Specialized Areas of C/Summary.html"
+                                class="d-inline-flex align-items-center rounded">Summary</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Libraries/Introduction.html" class="d-inline-flex align-items-center rounded">
+                        Libraries</a>
+                    <ul>
+                        <li><a href="../Libraries/Introduction.html"
+                                class="d-inline-flex align-items-center rounded">Introduction</a></li>
+                        <li><a href="../Libraries/Diagnostics.html"
+                                class="d-inline-flex align-items-center rounded">Diagnostics</a></li>
+                        <li><a href="../Libraries/CharacterHandling.html"
+                                class="d-inline-flex align-items-center rounded">Character handling</a></li>
+                        <li><a href="../Libraries/Localization.html"
+                                class="d-inline-flex align-items-center rounded">Localization</a></li>
+                        <li><a href="../Libraries/Limits.html"
+                                class="d-inline-flex align-items-center rounded">Limits</a></li>
+                        <li><a href="../Libraries/MathematicalFunction.html"
+                                class="d-inline-flex align-items-center rounded">Mathematical functions</a>
+                        </li>
+                        <li><a href="../Libraries/Non-LocalJumps.html"
+                                class="d-inline-flex align-items-center rounded">Non-local jumps</a></li>
+                        <li><a href="../Libraries/SignalHandling.html"
+                                class="d-inline-flex align-items-center rounded">Signal handling</a></li>
+                        <li><a href="../Libraries/VariableNumberOfArguments.html"
+                                class="d-inline-flex align-items-center rounded">Variable numbers of
+                                arguments</a></li>
+                        <li><a href="../Libraries/InputAndOutput.html" class="d-inline-flex align-items-center rounded">
+                                Input and output</a></li>
+                        <li><a href="../Libraries/FormattedInputOutput.html"
+                                class="d-inline-flex align-items-center rounded"> Formatted I/O</a></li>
+                        <li><a href="../Libraries/CharacterInputOutpur.html"
+                                class="d-inline-flex align-items-center rounded"> Character I/O</a></li>
+                        <li><a href="../Libraries/UnformattedInputOutput.html"
+                                class="d-inline-flex align-items-center rounded"> Unformatted I/O</a></li>
+                        <li><a href="../Libraries/RandomAccessFunctions.html"
+                                class="d-inline-flex align-items-center rounded"> Random access functions</a>
+                        </li>
+                        <li><a href="../Libraries/GeneralUntilities.html"
+                                class="d-inline-flex align-items-center rounded"> General Utilities</a></li>
+                        <li><a href="../Libraries/StringHandling.html" class="d-inline-flex align-items-center rounded">
+                                String handling</a></li>
+                        <li><a href="../Libraries/DateAndTime.html" class="d-inline-flex align-items-center rounded">
+                                Date and time</a></li>
+                        <li><a href="../Libraries/Summary.html" class="d-inline-flex align-items-center rounded">
+                                Summary</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Complete Programs in C/PutItAllTogether.html"
+                        class="d-inline-flex align-items-center rounded"> Complete Programs in C</a>
+                    <ul>
+                        <li><a href="../Complete Programs in C/PutItAllTogether.html"
+                                class="d-inline-flex align-items-center rounded">Putting it all together</a>
+                        </li>
+                        <li><a href="../Complete Programs in C/ArgumentToMain.html"
+                                class="d-inline-flex align-items-center rounded">Arguments to
+                                main</a></li>
+                        <li><a href="../Complete Programs in C/InterpretingProgramArguments.html"
+                                class="d-inline-flex align-items-center rounded">Interpreting program
+                                arguments</a></li>
+                        <li><a href="../Complete Programs in C/APatternMatchingProgram.html"
+                                class="d-inline-flex align-items-center rounded">A pattern matching
+                                program</a>
+                        </li>
+                        <li><a href="../Complete Programs in C/AMoreAmbitiousExample.html"
+                                class="d-inline-flex align-items-center rounded">A more ambitious example</a>
+                        </li>
+                        <li><a href="../Complete Programs in C/Afterword.html"
+                                class="d-inline-flex align-items-center rounded">Afterword</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div style=" font-size: 18px;  margin-left: 28%;  ">
+        <h1 class="text-center hadingfont p-2">Some more programs
+        </h1>
+
+        <p>While we're still in the informal phase, let's look at two more examples.
+            You will have to work out for yourself what some of the code does, but as
+            new or interesting features appear, they will be explained.</p>
+
+        <h3>A program to find prime numbers</h3>
+
+
+        <div class="inset-example"><a name="example-2"></a>
+            <pre>/*
+      *
+      * Dumb program that generates prime numbers.
+      */
+      #include &lt;stdio.h&gt;
+      #include &lt;stdlib.h&gt;
+      
+      main(){
+          int this_number, divisor, not_prime;
+      
+          this_number = 3;
+      
+          while(this_number &lt; 10000){
+                  divisor = this_number / 2;
+                  not_prime = 0;
+                  while(divisor &gt; 1){
+                          if(this_number % divisor == 0){
+                                  not_prime = 1;
+                                  divisor = 0;
+                          }
+                          else
+                                  divisor = divisor-1;
+                  }
+      
+                  if(not_prime == 0)
+                          printf("%d is a prime number\n", this_number);
+                  this_number = this_number + 1;
+          }
+          exit(EXIT_SUCCESS);
+      }</pre><cite>Example&nbsp;1.2</cite>
+        </div>
+
+        <p>What was interesting in there? A few new points, perhaps. The program
+            works in a really stupid way: to see if a number is prime, it divides that
+            number by all the numbers between half its value and two—if any
+            divide without remainder, then the number isn't prime. The two operators
+            that you haven't seen before are the remainder operator <code>%</code>,
+            and the equality operator, which is a double equal sign <code>==</code>.
+            That last one is without doubt the cause of more bugs in <a
+                href="http://training.gbdirect.co.uk/courses/c/">C</a> programs than
+            any other single factor.</p>
+
+        <p>The problem with the equality test is that wherever it can appear it is
+            also legal to put the single <code>=</code> sign. The first,
+            <code>==</code>, compares two things to see if they are equal, and is
+            generally what you need in fragments like these:
+        </p>
+
+        <pre>if(a == b)
+      while (c == d)</pre>
+
+        <p>The assignment operator <code>=</code> is, perhaps surprisingly, also
+            legal in places like those, but of course it assigns the value of the
+            right-hand expression to whatever is on the left. The problem is
+            particularly bad if you are used to the languages where comparison for
+            equality is done with what C uses for assignment. There's nothing that you
+            can do to help, so start getting used to it now. (Modern compilers do tend
+            to produce warnings when they think they have detected
+            ‘questionable’ uses of assignment operators, but that is a mixed
+            blessing when your choice was deliberate.)</p>
+
+        <p>There is also the introduction for the first time of the <code>if</code>
+            statement. Like the <code>while</code> statement, it tests an expression
+            to see if the expression is true. You might have noticed that also like
+            the <code>while</code> statement, the expression that controls the
+            <code>if</code> statement is in parentheses. That is always the case: all
+            of the conditional control of flow statements require a parenthesized
+            expression after the keyword that introduces them. The formal description
+            of the <code>if</code> statement goes like this:
+        </p>
+
+        <pre>if(<var>expression</var>)
+              <var>statement</var>
+      
+      if(<var>expression</var>)
+              <var>statement</var>
+      else
+              <var>statement</var></pre>
+
+        <p>showing that it comes in two forms. Of course, the effect is that if the
+            expression part is evaluated to be true, then the following statement is
+            executed. If the evaluation is false, then the following statement is not
+            executed. When there is an <code>else</code> part, the statement associated
+            with it is executed only if the evaluation gives a false result.</p>
+
+        <p><code>If</code> statements have a famous problem. In the following piece
+            of code, is the <em>statement-2</em> executed or not?</p>
+
+        <pre>if(1 &gt; 0)
+              if(1 &lt; 0)
+                      <var>statement-1</var>
+      else
+              <var>statement-2</var></pre>
+
+        <p>The answer is that it <em>is</em>. Ignore the indentation (which is
+            misleading). The <code>else</code> could belong to either the first or
+            second <code>if</code>, according to the description of the <code>if</code>
+            statement that has just been given, so an extra rule is needed to make it
+            unambiguous. The rule is simply that an <code>else</code> is associated
+            with the nearest <code>else</code>-less <code>if</code> above it. To make
+            the example work the way that the indentation implied, we have to invoke a
+            compound statement:</p>
+
+        <pre>if(1 &gt; 0){
+              if(1 &lt; 0)
+                      <var>statement-1</var>
+      }
+      else
+              <var>statement-2</var></pre>
+
+        <p>Here, at least, C adheres to the practice used by most other languages.
+            In fact a lot of programmers who are used to languages where the problem
+            exists have never even realized that it is there—they just thought
+            that the disambiguating rule was ‘obvious’. Let's hope that
+            everyone feels that way.</p>
+
+
+
+        <h3>The division operators</h3>
+
+
+
+        <p>The division operators are the division operator <code>/</code>, and the
+            remainder operator <code>%</code>. Division does what you would expect,
+            except that when it is applied to integer operands it gives a result that
+            is truncated towards zero. For example, <code>5/2</code> gives
+            <code>2</code>, <code>5/3</code> gives <code>1</code>. The remainder
+            operator is the way to get the truncated remainder. <code>5%2</code> gives
+            <code>1</code>, <code>5%3</code> gives <code>2</code>. The signs of the
+            remainder and quotient depend on the divisor and dividend in a way that is
+            defined in the Standard and shown in <a href="../chapter2/index.html">Chapter&nbsp;2</a>.
+        </p>
+
+
+
+        <h3>An example performing input</h3>
+
+
+        <p>It's useful to be able to perform input as well as to write programs
+            that print out more or less interesting lists and tables. The simplest of
+            the library routines (and the only one that we'll look at just now) is
+            called <code>getchar</code>. It reads single characters from the program's
+            input and returns an integer value. The value returned is a coded
+            representation for that character and can be used to print the same
+            character on the program output. It can also be compared against character
+            constants or other characters that have been read, although the only test
+            that makes sense is to see if both characters are the same. Comparing for
+            greater or less than each other is not portable in general; there is no
+            guarantee that <code>'a'</code> is less than <code>'b'</code>, although on
+            most common systems that would be the case. The only guarantee that the
+            Standard makes is that the codes for <code>'0'</code> through to
+            <code>'9'</code> will always be consecutive. Here is one example.
+        </p>
+
+        <div class="inset-example"><a name="example-3"></a>
+            <pre>#include &lt;stdio&gt;
+      #include &lt;stdlib.h&gt;
+      main(){
+              int ch;
+      
+              ch = getchar();
+              while(ch != 'a'){
+                      if(ch != '\n')
+                              printf("ch was %c, value %d\n", ch, ch);
+                      ch = getchar();
+              }
+              exit(EXIT_SUCCESS);
+      }</pre><cite>Example&nbsp;1.3</cite>
+        </div>
+
+        <p>There are two interesting points in there. The first is to notice that
+            at the end of each line of input read, the character represented by</p>
+
+        <pre>'\n'</pre>
+
+        <p>(a character constant) will be seen. This just like the way that the
+            same symbol results in a new line when <code>printf</code> prints it. The
+            model of I/O used by C is not based on a line by line view of the world,
+            but character by character instead; if you choose to think in a
+            line-oriented way, then <code>'\n'</code> allows you to mark the end of
+            each ‘line’. Second is the way that <code>%c</code> is used to
+            output a character by <code>printf</code>, when it appears on the output
+            as a character. Printing it with <code>%d</code> prints the same variable,
+            but displays the integer value used by your program to represent the
+            character.</p>
+
+        <p>If you try that program out, you may find that some systems do not pass
+            characters one by one to a program, but make you type a whole line of
+            input first. Then the whole line is made available as input, one character
+            at a time. Beginners have been known to be confused: the program is
+            started, they type some input, and nothing comes back. This behaviour is
+            nothing to do with C; it depends on the computer and operating system in
+            use.</p>
+
+
+
+        <h3>Simple arrays</h3>
+
+
+        <p>The use of <dfn>arrays</dfn> in C is often a problem for the beginner.
+            The declaration of arrays isn't too difficult, especially the
+            one-dimensional ones, but a constant source of confusion is the fact
+            that their indices always count from 0. To declare an array of
+            5 <code>int</code>s, the declaration would look like this:</p>
+
+        <pre>int something[5];</pre>
+
+        <p>In array declarations C uses square brackets, as you can see. There is
+            no support for arrays with indices whose ranges do not start at 0 and go
+            up; in the example, the valid array elements are <code>something[0]</code>
+            to <code>something[4]</code>. Notice very carefully that
+            <code>something[5]</code> is <em>not</em> a valid array element.
+        </p>
+
+        <p>This program reads some characters from its input, sorts them into the
+            order suggested by their representation, then writes them back out. Work
+            out what it does for yourself; the algorithm won't be given much attention
+            in the explanation which follows.</p>
+
+        <div class="inset-example"><a name="example-4"></a>
+            <pre>#include &lt;stdio&gt;
+      #include &lt;stdlib.h&gt;
+      #define ARSIZE  10
+      main(){
+              int ch_arr[ARSIZE],count1;
+              int count2, stop, lastchar;
+      
+              lastchar = 0;
+              stop = 0;
+              /*
+               * Read characters into array.
+               * Stop if end of line, or array full.
+               */
+              while(stop != 1){
+                      ch_arr[lastchar] = getchar();
+                      if(ch_arr[lastchar] == '\n')
+                              stop = 1;
+                      else
+                              lastchar = lastchar + 1;
+                      if(lastchar == ARSIZE)
+                              stop = 1;
+              }
+              lastchar = lastchar-1;
+      
+              /*
+               * Now the traditional bubble sort.
+               */
+              count1 = 0;
+              while(count1 &lt; lastchar){
+                      count2 = count1 + 1;
+                      while(count2 &lt;= lastchar){
+                              if(ch_arr[count1] &gt; ch_arr[count2]){
+                                      /* swap */
+                                      int temp;
+                                      temp = ch_arr[count1];
+                                      ch_arr[count1] = ch_arr[count2];
+                                      ch_arr[count2] = temp;
+                              }
+                              count2 = count2 + 1;
+                      }
+                      count1 = count1 + 1;
+              }
+      
+              count1 = 0;
+              while(count1 &lt;= lastchar){
+                      printf("%c\n", ch_arr[count1]);
+                      count1 = count1 + 1;
+              }
+              exit(EXIT_SUCCESS);
+      }</pre><cite>Example&nbsp;1.4</cite>
+        </div>
+
+        <p>You might note that the defined constant <code>ARSIZE</code> is used
+            everywhere instead of the actual array size. Because of that, to change
+            the maximum number of characters that can be sorted by this program simply
+            involves a change to one line and then re-compiling. Not so obvious but
+            critical to the safety of the program is the detection of the array
+            becoming full. Look carefully; you'll find that the program stops when
+            element <code>ARSIZE-1</code> has been filled. That is because in an
+            <code>N</code> element array, only elements <code>0</code> through to
+            <code>N-1</code> are available (giving <code>N</code> in total).
+        </p>
+
+        <p>Unlike some other languages it is unlikely that you will be told if you
+            ‘run off’ the end of an array in C. It results in what is known as
+            <dfn>undefined behaviour</dfn> on the part of your program, this generally
+            being to produce obscure errors in the future. Most skilled programmers
+            avoid this happening by rigorous testing to make sure either that it can't
+            happen given the particular algorithm in use, or by putting in an explicit
+            test before accessing a particular member of an array. This is a common
+            source of run-time errors in C; you have been warned.
+        </p>
+
+
+
+        <h3>Summary</h3>
+        <p>Arrays always number from <code>0</code>; you have no choice.</p>
+        <p>A <code>n</code>-element array has members which number from
+            <code>0</code> to <code>n-1</code> only. Element <code>n</code> does not
+            exist and to access it is a big mistake.
+        </p>
+
+
+
+    </div>
+    <div class="d-grid gap-4 d-md-block" style="margin-left: 374px; margin-bottom: 9px;">
+        <a href="/ADescriptionOfExample"> <button id="prev" onmouseenter=mouseevent(); onmouseleave=mouseleave();
+                class="btn btn-outline-primary" style="width: 166px; height: 44px;"
+                type="button">Previous</button></a>
+        <a href="/Terminology" > <button onmouseenter=mouseevent1(); onmouseleave=mouseleave1();
+                class="btn btn-outline-primary" id="next" style="margin-left: 64%; width: 166px; height: 44px;"
+                type="button">Next</button></a>
+    </div>
+
+    <footer class="" style="width: 100%;">
+        <ul class="nav justify-content-center border-bottom">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+        </ul>
+        <p class="text-center text-muted">© 2021 Company, Inc</p>
+    </footer>
+
+
+    <script src="func.js"></script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+        -->
+
+    <!--https://source.unsplash.com/200x200/?technology,programming-->
+
+</body>
+
+</html>

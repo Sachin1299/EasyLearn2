@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@500&family=Bungee&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../Static/style.css">
+
+    <title>C:Arrays Pointers</title>
+
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand hadingfont" href="#">EasyLearn</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown ps-3 pe-3">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            C
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark " aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item " style="color: white;" href="#">C</a></li>
+                            <li><a class="dropdown-item " style="color: white;" href="#">C++</a></li>
+                            <li><a class="dropdown-item " style="color: white;" href="#">Java</a></li>
+                            <li><a class="dropdown-item " style="color: white;" href="#">Python</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link   " aria-current="page" href="#">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <div class="mx-2">
+                    <button type="button" class="btn btn-danger ">Log Out</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <aside id="asidebar" class="oldheight">
+        <nav>
+            <h3 id="TOC" class="hadingfont text-center">Table of Contents</h3>
+            <ul class="list-group tableofcontent">
+                <li><a href="TheFormOfACProgram.html" class="d-inline-flex align-items-center rounded"> An Introduction
+                        to C</a>
+                    <ul>
+                        <li><a href="TheFormOfACProgram.html" class="d-inline-flex align-items-center rounded "> The
+                                form of a C
+                                program</a>
+                        </li>
+                        <li><a href="Functions.html" class="d-inline-flex align-items-center rounded"> Functions</a>
+                        </li>
+                        <li><a href="ADescriptionOfExample.html" class="d-inline-flex align-items-center rounded"> A
+                                description of Example
+                            </a>
+                        </li>
+                        <li><a href="SomeMorePrograms.html"
+                                class="d-inline-flex align-items-center rounded "> Some more
+                                programs</a></li>
+                        <li><a href="Terminology.html" class="d-inline-flex align-items-center rounded">
+                                Terminology</a></li>
+                        <li><a href="Summery.html" class="d-inline-flex align-items-center rounded"> Summary</a>
+                        </li>
+                        <li><a href="Excersice.html" class="d-inline-flex align-items-center rounded"> Exercises</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../Variables and Arithmetic/SomeFundamentals.html"
+                        class="d-inline-flex align-items-center rounded"> Variables and Arithmetic</a>
+                    <ul>
+                        <li><a href="../Variables and Arithmetic/SomeFundamentals.html"
+                                class="d-inline-flex align-items-center rounded">Some fundamentals</a></li>
+                        <li><a href="../Variables and Arithmetic/TheAlphabetOfC.html"
+                                class="d-inline-flex align-items-center rounded">The alphabet of&nbsp;C</a>
+                        </li>
+                        <li><a href="../Variables and Arithmetic/TheTextualStructureOfPrograms.html"
+                                class="d-inline-flex align-items-center rounded">The Textual Structure of
+                                Programs</a>
+                        </li>
+                        <li><a href="../Variables and Arithmetic/KeywordsAndIdentifiers.html"
+                                class="d-inline-flex align-items-center rounded">Keywords and identifiers</a>
+                        </li>
+                        <li><a href="../Variables and Arithmetic/DeclarationOfVariables.html"
+                                class="d-inline-flex align-items-center rounded">Declaration of variables</a>
+                        </li>
+                        <li><a href="../Variables and Arithmetic/RealTypes.html"
+                                class="d-inline-flex align-items-center rounded">Real types</a></li>
+                        <li><a href="../Variables and Arithmetic/IntegralTypes.html"
+                                class="d-inline-flex align-items-center rounded">Integral types</a></li>
+                        <li><a href="../Variables and Arithmetic/ExpressionAndArithmetic.html"
+                                class="d-inline-flex align-items-center rounded">Expressions and
+                                arithmetic</a>
+                        </li>
+                        <li><a href="../Variables and Arithmetic/Constants.html"
+                                class="d-inline-flex align-items-center rounded">Constants</a></li>
+                        <li><a href="../Variables and Arithmetic/Summery.html"
+                                class="d-inline-flex align-items-center rounded">Summary</a></li>
+                        <li><a href="../Variables and Arithmetic/Exercises.html"
+                                class="d-inline-flex align-items-center rounded">Exercises</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Control of Flow and Logical Expressions/TheTaskAhead.html"
+                        class="d-inline-flex align-items-center rounded"> Control of Flow and Logical
+                        Expressions</a>
+                    <ul>
+                        <li><a href="../Control of Flow and Logical Expressions/TheTaskAhead.html"
+                                class="d-inline-flex align-items-center rounded">The Task ahead</a></li>
+                        <li><a href="../Control of Flow and Logical Expressions/ControlOfFlow.html"
+                                class="d-inline-flex align-items-center rounded">Control of flow</a></li>
+                        <li><a href="../Control of Flow and Logical Expressions/MoreLogicalExpressions.html"
+                                class="d-inline-flex align-items-center rounded">More logical expressions</a>
+                        </li>
+                        <li><a href="../Control of Flow and Logical Expressions/StrangeOperators.html"
+                                class="d-inline-flex align-items-center rounded">Strange operators</a></li>
+                        <li><a href="../Control of Flow and Logical Expressions/Summery.html"
+                                class="d-inline-flex align-items-center rounded">Summary</a></li>
+                        <li><a href="../Control of Flow and Logical Expressions/Exercise.html"
+                                class="d-inline-flex align-items-center rounded">Exercises</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Functions/Changes.html" class="d-inline-flex align-items-center rounded"> Functions</a>
+                    <ul>
+                        <li><a href="../Functions/Changes.html" class="d-inline-flex align-items-center rounded">
+                                Changes</a></li>
+                        <li><a href="../Functions/TheTypeOfFunctions.html"
+                                class="d-inline-flex align-items-center rounded"> The type of functions</a>
+                        </li>
+                        <li><a href="../Functions/RecursionAndArgumentPassing.html"
+                                class="d-inline-flex align-items-center rounded"> Recursion and argument
+                                passing</a></li>
+                        <li><a href="../Functions/Linkage.html" class="d-inline-flex align-items-center rounded">
+                                Linkage</a></li>
+                        <li><a href="../Functions/Summery.html" class="d-inline-flex align-items-center rounded">
+                                Summary</a></li>
+                        <li><a href="../Functions/Exercises.html" class="d-inline-flex align-items-center rounded">
+                                Exercises</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Arrays and Pointers/OpeningShots.html" class="d-inline-flex align-items-center rounded">
+                        Arrays and Pointers</a>
+                    <ul>
+                        <li><a href="../Arrays and Pointers/OpeningShots.html"
+                                class="d-inline-flex align-items-center rounded ">Opening shots</a></li>
+                        <li><a href="../Arrays and Pointers/Arrays.html"
+                                class="d-inline-flex align-items-center rounded ">Arrays</a></li>
+                        <li><a href="../Arrays and Pointers/Pointers.html"
+                                class="d-inline-flex align-items-center rounded currenttopic">Pointers</a></li>
+                        <li><a href="../Arrays and Pointers/CharacterHandling.html"
+                                class="d-inline-flex align-items-center rounded ">Character handling</a></li>
+                        <li><a href="../Arrays and Pointers/SizeofAndStorageAllocation.html"
+                                class="d-inline-flex align-items-center rounded">Sizeof and storage
+                                allocation</a></li>
+                        <li><a href="../Arrays and Pointers/PointersToFunction.html"
+                                class="d-inline-flex align-items-center rounded">Pointers to functions</a>
+                        </li>
+                        <li><a href="../Arrays and Pointers/ExpressionInvolvingPointers.html"
+                                class="d-inline-flex align-items-center rounded ">Expressions involving
+                                pointers</a></li>
+                        <li><a href="../Arrays and Pointers/ArraysThe&OperatorAndFunctionDeclaration.html"
+                                class="d-inline-flex align-items-center rounded">Arrays, the (and) operator and function
+                                declarations</a></li>
+                        <li><a href="../Arrays and Pointers/Summary.html"
+                                class="d-inline-flex align-items-center rounded">5.9. Summary</a></li>
+                        <li><a href="../Arrays and Pointers/Exercises.html"
+                                class="d-inline-flex align-items-center rounded ">5.10. Exercises</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="../Structured Data Types/History.html" class="d-inline-flex align-items-center rounded">
+                        Structured Data Types</a>
+                    <ul>
+                        <li><a href="../Structured Data Types/History.html"
+                                class="d-inline-flex align-items-center rounded">History</a></li>
+                        <li><a href="../Structured Data Types/Structure.html"
+                                class="d-inline-flex align-items-center rounded">Structures</a></li>
+                        <li><a href="../Structured Data Types/Unions.html"
+                                class="d-inline-flex align-items-center rounded">Unions</a></li>
+                        <li><a href="../Structured Data Types/Bitfields.html"
+                                class="d-inline-flex align-items-center rounded">Bitfields</a></li>
+                        <li><a href="../Structured Data Types/Enums.html"
+                                class="d-inline-flex align-items-center rounded">Enums</a></li>
+                        <li><a href="../Structured Data Types/QualifiersAndDerivedTypes.html"
+                                class="d-inline-flex align-items-center rounded">Qualifiers and derived
+                                types</a>
+                        </li>
+                        <li><a href="../Structured Data Types/Initialization.html"
+                                class="d-inline-flex align-items-center rounded">Initialization</a></li>
+                        <li><a href="../Structured Data Types/Summary.html"
+                                class="d-inline-flex align-items-center rounded">Summary</a></li>
+                        <li><a href="../Structured Data Types/Exercises.html"
+                                class="d-inline-flex align-items-center rounded">Exercises</a></li>
+                    </ul>
+                </li>
+                <li><a href="../The Preprocessor/EffectOfTheStandard.html"
+                        class="d-inline-flex align-items-center rounded"> The Preprocessor</a>
+                    <ul>
+                        <li><a href="../The Preprocessor/EffectOfTheStandard.html"
+                                class="d-inline-flex align-items-center rounded">Effect of the Standard</a>
+                        </li>
+                        <li><a href="../The Preprocessor/HowThePreProcessorWorks.html"
+                                class="d-inline-flex align-items-center rounded">How the preprocessor
+                                works</a>
+                        </li>
+                        <li><a href="../The Preprocessor/Directives.html"
+                                class="d-inline-flex align-items-center rounded">Directives</a></li>
+                        <li><a href="../The Preprocessor/Summary.html"
+                                class="d-inline-flex align-items-center rounded">Summary</a></li>
+                        <li><a href="../The Preprocessor/Exercises.html"
+                                class="d-inline-flex align-items-center rounded">Exercises</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Specialized Areas of C/GovermentHealthWarning.html"
+                        class="d-inline-flex align-items-center rounded"> Specialized Areas of C</a>
+                    <ul>
+                        <li><a href="../Specialized Areas of C/GovermentHealthWarning.html"
+                                class="d-inline-flex align-items-center rounded">Government Health
+                                Warning</a>
+                        </li>
+                        <li><a href="../Specialized Areas of C/DeclarationDefinationAndAccessibility.html"
+                                class="d-inline-flex align-items-center rounded">Declarations, Definitions
+                                and
+                                Accessibility</a></li>
+                        <li><a href="../Specialized Areas of C/Typedef.html"
+                                class="d-inline-flex align-items-center rounded">Typedef</a>
+                        </li>
+                        <li><a href="../Specialized Areas of C/ConstAndVolatile.html"
+                                class="d-inline-flex align-items-center rounded">Const and
+                                volatile</a></li>
+                        <li><a href="../Specialized Areas of C/SequencePoints.html"
+                                class="d-inline-flex align-items-center rounded">Sequence points</a></li>
+                        <li><a href="../Specialized Areas of C/Summary.html"
+                                class="d-inline-flex align-items-center rounded">Summary</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Libraries/Introduction.html" class="d-inline-flex align-items-center rounded">
+                        Libraries</a>
+                    <ul>
+                        <li><a href="../Libraries/Introduction.html"
+                                class="d-inline-flex align-items-center rounded">Introduction</a></li>
+                        <li><a href="../Libraries/Diagnostics.html"
+                                class="d-inline-flex align-items-center rounded">Diagnostics</a></li>
+                        <li><a href="../Libraries/CharacterHandling.html"
+                                class="d-inline-flex align-items-center rounded">Character handling</a></li>
+                        <li><a href="../Libraries/Localization.html"
+                                class="d-inline-flex align-items-center rounded">Localization</a></li>
+                        <li><a href="../Libraries/Limits.html"
+                                class="d-inline-flex align-items-center rounded">Limits</a></li>
+                        <li><a href="../Libraries/MathematicalFunction.html"
+                                class="d-inline-flex align-items-center rounded">Mathematical functions</a>
+                        </li>
+                        <li><a href="../Libraries/Non-LocalJumps.html"
+                                class="d-inline-flex align-items-center rounded">Non-local jumps</a></li>
+                        <li><a href="../Libraries/SignalHandling.html"
+                                class="d-inline-flex align-items-center rounded">Signal handling</a></li>
+                        <li><a href="../Libraries/VariableNumberOfArguments.html"
+                                class="d-inline-flex align-items-center rounded">Variable numbers of
+                                arguments</a></li>
+                        <li><a href="../Libraries/InputAndOutput.html" class="d-inline-flex align-items-center rounded">
+                                Input and output</a></li>
+                        <li><a href="../Libraries/FormattedInputOutput.html"
+                                class="d-inline-flex align-items-center rounded"> Formatted I/O</a></li>
+                        <li><a href="../Libraries/CharacterInputOutpur.html"
+                                class="d-inline-flex align-items-center rounded"> Character I/O</a></li>
+                        <li><a href="../Libraries/UnformattedInputOutput.html"
+                                class="d-inline-flex align-items-center rounded"> Unformatted I/O</a></li>
+                        <li><a href="../Libraries/RandomAccessFunctions.html"
+                                class="d-inline-flex align-items-center rounded"> Random access functions</a>
+                        </li>
+                        <li><a href="../Libraries/GeneralUntilities.html"
+                                class="d-inline-flex align-items-center rounded"> General Utilities</a></li>
+                        <li><a href="../Libraries/StringHandling.html" class="d-inline-flex align-items-center rounded">
+                                String handling</a></li>
+                        <li><a href="../Libraries/DateAndTime.html" class="d-inline-flex align-items-center rounded">
+                                Date and time</a></li>
+                        <li><a href="../Libraries/Summary.html" class="d-inline-flex align-items-center rounded">
+                                Summary</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Complete Programs in C/PutItAllTogether.html"
+                        class="d-inline-flex align-items-center rounded"> Complete Programs in C</a>
+                    <ul>
+                        <li><a href="../Complete Programs in C/PutItAllTogether.html"
+                                class="d-inline-flex align-items-center rounded">Putting it all together</a>
+                        </li>
+                        <li><a href="../Complete Programs in C/ArgumentToMain.html"
+                                class="d-inline-flex align-items-center rounded">Arguments to
+                                main</a></li>
+                        <li><a href="../Complete Programs in C/InterpretingProgramArguments.html"
+                                class="d-inline-flex align-items-center rounded">Interpreting program
+                                arguments</a></li>
+                        <li><a href="../Complete Programs in C/APatternMatchingProgram.html"
+                                class="d-inline-flex align-items-center rounded">A pattern matching
+                                program</a>
+                        </li>
+                        <li><a href="../Complete Programs in C/AMoreAmbitiousExample.html"
+                                class="d-inline-flex align-items-center rounded">A more ambitious example</a>
+                        </li>
+                        <li><a href="../Complete Programs in C/Afterword.html"
+                                class="d-inline-flex align-items-center rounded">Afterword</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div style=" font-size: 18px;  margin-left: 28%;  ">
+        <h1 class="text-center hadingfont p-2">Some more programs
+        </h1>
+
+        <p>While we're still in the informal phase, let's look at two more examples.
+            You will have to work out for yourself what some of the code does, but as
+            new or interesting features appear, they will be explained.</p>
+
+        <h3 id="h3">A program to find prime numbers</h3>
+
+        <div class="inset-example"><a name="example-3"></a>
+            <pre>#include &lt;stdio&gt;
+     
+              }
+              exit(EXIT_SUCCESS);
+      }</pre><cite>Example&nbsp;1.3</cite>
+        </div>
+
+
+
+
+        <p>While we're still in the informal phase, let's look at two more examples.
+            You will have to work out for yourself what some of the code does, but as
+            new or interesting features appear, they will be explained.</p>
+        <p>While we're still in the informal phase, let's look at two more examples.
+            You will have to work out for yourself what some of the code does, but as
+            new or interesting features appear, they will be explained.</p>
+        <p>While we're still in the informal phase, let's look at two more examples.
+            You will have to work out for yourself what some of the code does, but as
+            new or interesting features appear, they will be explained.</p>
+        <p>While we're still in the informal phase, let's look at two more examples.
+            You will have to work out for yourself what some of the code does, but as
+            new or interesting features appear, they will be explained.</p>
+        <p>While we're still in the informal phase, let's look at two more examples.
+            You will have to work out for yourself what some of the code does, but as
+            new or interesting features appear, they will be explained.</p>
+        <p>While we're still in the informal phase, let's look at two more examples.
+            You will have to work out for yourself what some of the code does, but as
+            new or interesting features appear, they will be explained.</p>
+        <p>While we're still in the informal phase, let's look at two more examples.
+            You will have to work out for yourself what some of the code does, but as
+            new or interesting features appear, they will be explained.</p>
+        <p>While we're still in the informal phase, let's look at two more examples.
+            You will have to work out for yourself what some of the code does, but as
+            new or interesting features appear, they will be explained.</p>
+        <p>While we're still in the informal phase, let's look at two more examples.
+            You will have to work out for yourself what some of the code does, but as
+            new or interesting features appear, they will be explained.</p>
+        <p>While we're still in the informal phase, let's look at two more examples.
+            You will have to work out for yourself what some of the code does, but as
+            new or interesting features appear, they will be explained.</p>
+        <p>While we're still in the informal phase, let's look at two more examples.
+            You will have to work out for yourself what some of the code does, but as
+            new or interesting features appear, they will be explained.</p>
+        <p>While we're still in the informal phase, let's look at two more examples.
+            You will have to work out for yourself what some of the code does, but as
+            new or interesting features appear, they will be explained.</p>
+
+
+
+        <h3>Summary</h3>
+        <p>Arrays always number from <code>0</code>; you have no choice.</p>
+
+
+    </div>
+    <div class="d-grid gap-4 d-md-block" style="margin-left: 374px; margin-bottom: 9px;">
+        <a href="" ;> <button id="prev" onmouseenter=mouseevent(); onmouseleave=mouseleave();
+                class="btn btn-outline-primary" ; style="width: 166px; height: 44px;"
+                type="button">Previous</button></a>
+        <a href="" ;> <button onmouseenter=mouseevent1(); onmouseleave=mouseleave1(); class="btn btn-outline-primary" ;
+                id="next" ; style="margin-left: 64%; width: 166px; height: 44px;" type="button">Next</button></a>
+    </div>
+
+
+
+
+
+
+    <footer class="" style="width: 100%;">
+        <ul class="nav justify-content-center border-bottom">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+        </ul>
+        <p class="text-center text-muted">© 2021 Company, Inc</p>
+    </footer>
+
+
+    <script src="../../Static/func.js"></script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+    <!--https://source.unsplash.com/200x200/?technology,programming-->
+
+</body>
+
+</html>

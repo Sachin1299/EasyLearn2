@@ -1,0 +1,398 @@
+<!doctype html>
+<html  xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.thymeleaf.org ">
+
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+	crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@500&family=Bungee&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<title>EasyLearn Home</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+		
+		$("#username").change(function() {
+			$.ajax({
+				
+				url:'loginmessage1',
+				data:{
+					username: $("#username").val()	
+				},
+				success: function(responseText){
+				$("#usernamemsg").text(responseText);
+				 if(responseText!="")
+					 {
+					 $("#username").focus();
+					 }
+				
+				}
+				
+				
+			});
+		});
+		
+		$("#inputEmail4").change(function() {
+			$.ajax({
+				
+				url:'loginmessage',
+				data:{
+					email: $("#inputEmail4").val()	
+				},
+				success: function(responseText){
+				$("#emailmsg").text(responseText);
+				 if(responseText!="")
+					 {
+					 $("#inputEmail4").focus();
+					 }
+				
+				}
+				
+				
+			});
+		});
+		
+		
+		
+	});
+</script>
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand hadingfont" href="#">EasyLearn</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">Home</a></li>
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle active" href="#"
+						id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+						aria-expanded="false"> Languages </a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item"
+								href="C/An Introduction to C/TheFormOfACProgram.html">C</a></li>
+							<li><a class="dropdown-item" href="C++\Introduction.html">C++</a></li>
+							<li><a class="dropdown-item" href="Java/Introduction.html">Java</a></li>
+							<li><a class="dropdown-item" href="Python/Introduction.html">Python</a></li>
+						</ul></li>
+					<li class="nav-item"><a class="nav-link " aria-current="page"
+						href="#">About</a></li>
+					<li class="nav-item"><a class="nav-link   "
+						aria-current="page" href="#">Contact</a></li>
+				</ul>
+				<form class="d-flex">
+					<input class="form-control me-2" type="search" placeholder="Search"
+						aria-label="Search">
+					<button class="btn btn-outline-success" type="submit">Search</button>
+				</form>
+				<div class="mx-2">
+					<button type="button" class="btn btn-primary"
+						data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+					<button type="button" class="btn btn-danger "
+						data-bs-toggle="modal" data-bs-target="#signupModal">Sign
+						Up</button>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+
+
+	<!-- Login Modal -->
+	<div class="modal fade" id="loginModal" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Login</h5>
+
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form action="login" method="post">
+						<span id="LoginMessage" th:text=${msg} > </span>
+						<div class="mb-3">
+							<label for="exampleInputEmail1" class="form-label">Email
+								address</label> <input type="email" class="form-control"
+								id="email" name="email"
+								aria-describedby="emailHelp">
+							<div id="emailHelp" class="form-text">We'll never share
+								your email with anyone else.</div>
+						</div>
+						<div class="mb-3">
+							<label for="password" class="form-label">Password</label>
+							<input type="password" name="password" class="form-control"
+								id="password">
+						</div>
+						<div class="mb-3 form-check">
+							<input type="checkbox" class="form-check-input"
+								id="exampleCheck1"> <label class="form-check-label"
+								for="exampleCheck1">Check me out</label>
+						</div>
+						<button type="submit" id="login" class="btn btn-primary">Login</button>
+
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-bs-dismiss="modal">Close</button>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- sign Up Modal -->
+	<div class="modal fade" id="signupModal" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form class="row g-3" action="/signup" method="post">
+						<div class="col-md-6">
+							<label for="inputEmail4" class="form-label">First Name</label> <input
+								type="text" name="firstname" class="form-control" id="firstname">
+						</div>
+						<div class="col-md-6">
+							<label for="inputPassword4" class="form-label">Last Name</label>
+							<input type="text" name="lastname" class="form-control"
+								id="Lastname">
+						</div>
+						<div>
+							<label for="inputEmail4" class="form-label">Email</label> <input
+								type="email" name="email" class="form-control" id="inputEmail4">
+								<span id="emailmsg"></span>
+						</div>
+						<div class="col-md-6">
+							<label for="username" class="form-label">Username</label> <input
+								type="text" name="username" class="form-control" id="username">
+								<span id="usernamemsg"></span>
+						</div>
+						<div class="col-md-6">
+							<label for="inputPassword4" class="form-label">Password</label> <input
+								type="password" name="password" class="form-control"
+								id="inputPassword4">
+						</div>
+
+						<div class="col-md-6">
+							<label for="inputPassword4" class="form-label">Contact
+								No.</label> <input type="text" name="contactno" class="form-control"
+								id="contactno">
+						</div>
+						<div class="col-md-6">
+							<label for="City" class="form-label">City</label> <input
+								type="text" name="city" class="form-control" id="City">
+						</div>
+						<div class="col-12">
+							<button type="submit" class="btn btn-primary">Sign up</button>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 
+   "https://source.unsplash.com/1400x300/?coding,programming" 
+             /EasyLean/src/main/resources/templates/C/An Introduction to C/TheFormOfACProgram.html   -->
+
+	<div id="carouselExampleCaptions" class="carousel slide"
+		data-bs-ride="carousel">
+		<div class="carousel-indicators">
+			<button type="button" data-bs-target="#carouselExampleCaptions"
+				data-bs-slide-to="0" class="active" aria-current="true"
+				aria-label="Slide 1"></button>
+			<button type="button" data-bs-target="#carouselExampleCaptions"
+				data-bs-slide-to="1" aria-label="Slide 2"></button>
+			<button type="button" data-bs-target="#carouselExampleCaptions"
+				data-bs-slide-to="2" aria-label="Slide 3"></button>
+		</div>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="Images/SlidePicture1.jpg" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>First slide label</h5>
+					<p>Some representative placeholder content for the first slide.</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="Images/SlidePicture2.jpg" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>Second slide label</h5>
+					<p>Some representative placeholder content for the second
+						slide.</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="Images/SlidePicture3.jpg" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>Third slide label</h5>
+					<p>Some representative placeholder content for the third slide.</p>
+				</div>
+			</div>
+		</div>
+		<button class="carousel-control-prev" type="button"
+			data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+				class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button"
+			data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span> <span
+				class="visually-hidden">Next</span>
+		</button>
+	</div>
+	<div class="row my-4 mx-4">
+		<div class="col-md-6">
+			<div
+				class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+				<div class="col p-4 d-flex flex-column position-static">
+					<strong class="d-inline-block mb-2 text-primary">Programming
+						Language</strong>
+					<h3 class="mb-0">C</h3>
+					<div class="mb-1 text-muted">Nov 12</div>
+					<p class="card-text mb-auto">C is a procedural programming
+						language. It was initially developed by Dennis Ritchie. It was
+						mainly developed as a system programming language to write an
+						operating system.</p>
+					<a class="localtop" href="/TheFormOfACProgram"><button
+							type="button" class=" btn btn-primary btn-sm">Learn C</button></a>
+				</div>
+				<div class="col-auto d-none d-lg-block">
+					<img class="bd-placeholder-img" width="200" height="250"
+						src="Images/c.jpg" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="udh col-md-6">
+			<div
+				class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+				style="margin-left: 7px;">
+				<div class="col p-4 d-flex flex-column position-static">
+					<strong class="d-inline-block mb-2 text-success">Programming
+						Language</strong>
+					<h3 class="mb-0">C++</h3>
+					<div class="mb-1 text-muted">Nov 12</div>
+					<p class="card-text mb-auto">C++ is an object-oriented
+						programming language which gives a clear structure to programs and
+						allows code to be reused, lowering development costs.C++ is fun
+						and easy to learn</p>
+					<a class="localtop" href=""><button type="button"
+							class=" btn btn-success btn-sm">Learn C++</button></a>
+				</div>
+				<div class="col-auto d-none d-lg-block">
+					<img class="bd-placeholder-img" width="200" height="250"
+						src="Images/images.jpg" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div
+				class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+				<div class="col p-4 d-flex flex-column position-static">
+					<strong class="d-inline-block mb-2 text-warning">Programming
+						Language</strong>
+					<h3 class="mb-0">Python</h3>
+					<div class="mb-1 text-muted">Nov 12</div>
+					<p class="card-text mb-auto">Python has a simple syntax similar
+						to the English language. Python has syntax that allows developers
+						to write programs with fewer lines than some other programming
+						languages.</p>
+					<a class="localtop" href=""><button type="button"
+							class=" btn btn-warning btn-sm">Learn Python</button></a>
+				</div>
+				<div class="col-auto d-none d-lg-block">
+					<img class="bd-placeholder-img" width="200" height="250"
+						src="Images/python.jpg" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="udh col-md-6">
+			<div
+				class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+				style="margin-left: 7px;">
+				<div class="col p-4 d-flex flex-column position-static">
+					<strong class="d-inline-block mb-2 text-danger">Programming
+						Language</strong>
+					<h3 class="mb-0">Java</h3>
+					<div class="mb-1 text-muted">Nov 12</div>
+					<p class="card-text mb-auto">Java is an object-oriented
+						programming language that produces software for multiple
+						platforms. When a programmer writes a Java application, it runs on
+						most operating systems.</p>
+					<a class="localtop" href=""><button type="button"
+							class=" btn btn-danger btn-sm">Learn Java</button></a>
+				</div>
+				<div class="col-auto d-none d-lg-block">
+					<img class="bd-placeholder-img" width="200" height="250"
+						src="Images/javadownload.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="py-3 my-4 ">
+		<ul class="nav justify-content-center border-bottom pb-3 mb-3">
+			<li class="nav-item"><a href="#"
+				class="nav-link px-2 text-muted">Home</a></li>
+			<li class="nav-item"><a href="#"
+				class="nav-link px-2 text-muted">Features</a></li>
+			<li class="nav-item"><a href="#"
+				class="nav-link px-2 text-muted">Pricing</a></li>
+			<li class="nav-item"><a href="#"
+				class="nav-link px-2 text-muted">FAQs</a></li>
+			<li class="nav-item"><a href="#"
+				class="nav-link px-2 text-muted">About</a></li>
+		</ul>
+		<p class="text-center text-muted ">© 2021 Company, Inc</p>
+	</footer>
+
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@500&family=Bungee&display=swap" rel="stylesheet">
+    <title>C:Variables and Arithmetic</title>
+    <style>
+        aside {
+
+            float: left;
+            
+            width: 400px;
+            padding-left: 18px;
+            padding-top: 0px;
+            padding-right: 0px;
+            margin-right: 0px;
+            margin-bottom: 21px;
+            position: absolute;
+            height: 100%;
+            color: rgb(146, 20, 20);
+            background-color: #242527;
+                     
+        }
+        .tableofcontent{
+            color: white;
+            font:18px bold;
+            font-style: initial;
+            margin-top: 40px;
+            
+            
+        }
+        li{
+            color: white;
+        }
+       *{
+        font-family: 'Arima Madurai', cursive;
+        
+       }
+        a{
+            
+            color: white;
+            text-decoration: none;
+            
+        }
+        footer {
+            margin-bottom: 25px;
+            background-color: #242527;
+        }
+
+        .aligncenter {
+            align-content: center;
+        }
+
+        .padding {
+            margin-left: 30px;
+        }
+
+        .scroller {
+
+            scrollbar-base-color: #242527;   
+            overflow-y: scroll;
+            height: 100%;
+        }
+
+        h3 {
+            margin-right: 9px;
+            position: relative;
+            background-color: aqua;
+        }
+
+        .hadingfont{
+            font-family: 'Bungee', cursive;
+        }
+       /*  
+        .sticky{
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }*/
+        .dkfj {
+            position: relative;
+            height: 100%;
+
+        }
+        aside::ul::li{
+           margin-top: 30px;
+        }
+        a:hover{
+            padding: 1px;
+            background-color: aqua;
+            color: black;
+        }
+
+        .currenttopic{
+            padding: 1px;
+            background-color: aqua;
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body class="">
+
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand hadingfont" href="#">EasyLearn</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown ps-3 pe-3">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                C
+                            </a>
+                            <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item text-light" href="#">C</a></li>
+                                <li><a class="dropdown-item text-light" href="#">C++</a></li>
+                                <li><a class="dropdown-item text-light" href="#">Java</a></li>
+                                <li><a class="dropdown-item text-light" href="#">Python</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link   " aria-current="page" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <div class="mx-2">
+                        <button type="button" class="btn btn-danger ">Log Out</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+
+
+
+
+    <div class="dkfj">
+        <aside >
+            <nav class="scroller ">
+                <h3 id="TOC" class="hadingfont text-center">Table of Contents</h3>
+                <ul class="list-group tableofcontent">
+                    <li><a href="" class="d-inline-flex align-items-center rounded"> An Introduction to C</a>
+                        <ul>
+                            <li><a href="" class="d-inline-flex align-items-center rounded "> The form of a C program</a>
+                            </li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded"> Functions</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded"> A description of Example
+                                </a>
+                            </li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded"> Some more programs</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded"> Terminology</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded"> Summary</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded"> Exercises</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="d-inline-flex align-items-center rounded"currenttopic> Variables and Arithmetic</a>
+                        <ul>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Some fundamentals</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">The alphabet of&nbsp;C</a>
+                            </li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">The Textual Structure of
+                                    Programs</a>
+                            </li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Keywords and identifiers</a>
+                            </li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Declaration of variables</a>
+                            </li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Real types</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Integral types</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Expressions and
+                                    arithmetic</a>
+                            </li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Constants</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Summary</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Exercises</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="d-inline-flex align-items-center rounded"> Control of Flow and Logical
+                            Expressions</a>
+                        <ul>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">The Task ahead</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Control of flow</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">More logical expressions</a>
+                            </li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Strange operators</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Summary</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Exercises</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="d-inline-flex align-items-center rounded"> Functions</a>
+                        <ul>
+                            <li><a href="" class="d-inline-flex align-items-center rounded"> Changes</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded"> The type of functions</a>
+                            </li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded"> Recursion and argument
+                                    passing</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded"> Linkage</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded"> Summary</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded"> Exercises</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="d-inline-flex align-items-center rounded"> Arrays and Pointers</a>
+                        <ul>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Opening shots</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Arrays</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Pointers</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Character handling</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Sizeof and storage
+                                    allocation</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Pointers to functions</a>
+                            </li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Expressions involving
+                                    pointers</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Arrays, the
+                                    <code>&amp;</code>
+                                    operator and function
+                                    declarations</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">5.9. Summary</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">5.10. Exercises</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="" class="d-inline-flex align-items-center rounded"> Structured Data Types</a>
+                        <ul>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">History</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Structures</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Unions</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Bitfields</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Enums</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Qualifiers and derived
+                                    types</a>
+                            </li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Initialization</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Summary</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Exercises</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="d-inline-flex align-items-center rounded"> The Preprocessor</a>
+                        <ul>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Effect of the Standard</a>
+                            </li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">How the preprocessor
+                                    works</a>
+                            </li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Directives</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Summary</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Exercises</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="d-inline-flex align-items-center rounded"> Specialized Areas of C</a>
+                        <ul>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Government Health
+                                    Warning</a>
+                            </li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Declarations, Definitions
+                                    and
+                                    Accessibility</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded"><code>Typedef</code></a>
+                            </li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded"><code>Const</code> and
+                                    <code>volatile</code></a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Sequence points</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Summary</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="d-inline-flex align-items-center rounded"> Libraries</a>
+                        <ul>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Introduction</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Diagnostics</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Character handling</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Localization</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Limits</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Mathematical functions</a>
+                            </li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Non-local jumps</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Signal handling</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Variable numbers of
+                                    arguments</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded"> Input and output</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded"> Formatted I/O</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded"> Character I/O</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded"> Unformatted I/O</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded"> Random access functions</a>
+                            </li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded"> General Utilities</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded"> String handling</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded"> Date and time</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded"> Summary</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="d-inline-flex align-items-center rounded"> Complete Programs in C</a>
+                        <ul>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Putting it all together</a>
+                            </li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Arguments to
+                                    <code>main</code></a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Interpreting program
+                                    arguments</a></li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">A pattern matching
+                                    program</a>
+                            </li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">A more ambitious example</a>
+                            </li>
+                            <li><a href="" class="d-inline-flex align-items-center rounded">Afterword</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+
+
+
+        </aside>
+
+        <div style="margin-left: 410px; margin-right: 40px; font-size: 18px;">
+            <h1 class="text-center hadingfont p-2">The form of a C program
+            </h1>
+            <p>If you're used to the block-structured form of, say, Pascal, then at the outer level the layout of a C
+                program may surprise you. If your experience lies in the FORTRAN camp you will find it closer to what
+                you
+                already know, but the inner level will look quite different. C has borrowed shamelessly from both kinds
+                of
+                language, and from a lot of other places too. The input from so many varied sources has spawned a
+                language a
+                bit like a cross-bred terrier: inelegant in places, but a tenacious brute that the family is fond of.
+                Biologists refer to this phenomenon as ‘hybrid vigour’. They might also draw your attention to the
+                ‘chimera’, an artificial crossbreed of creatures such as a sheep and a goat. If it gives wool and milk,
+                fine, but it might equally well just bleat and stink!</p>
+            <p>
+                At the coarsest level, an obvious feature is the multi-file structure of a program. The language permits
+                separate compilation, where the parts of a complete program can be kept in one or more source files and
+                compiled independently of each other. The idea is that the compilation process will produce files which
+                can
+                then be linked together using whatever link editor or loader that your system provides. The block
+                structure
+                of the Algol-like languages makes this harder by insisting that the whole program comes in one chunk,
+                although there are usually ways of getting around it.</p>
+            <p>
+                The reason for C's approach is historical and rather interesting. It is supposed to speed things up: the
+                idea is that compiling a program into relocatable object code is slow and expensive in terms of
+                resources;
+                compiling is hard work. Using the loader to bind together a number of object code modules should simply
+                be a
+                matter of sorting out the absolute addresses of each item in the modules when combined into a complete
+                program. This should be relatively inexpensive. The expansion of the idea to arrange for the loader to
+                scan
+                libraries of object modules, and select the ones that are needed, is an obvious one. The benefit is that
+                if
+                you change one small part of a program then the expense of recompiling all of it may be avoided; only
+                the
+                module that was affected has to be recompiled.</p>
+            <p>
+                All, the same, it's true that the more work put on to the loader, the slower it becomes, in fact
+                sometimes
+                it can be the slowest and most resource consuming part of the whole procedure. It is possible that, for
+                some
+                systems, it would be quicker to recompile everything in one go than to have to use the loader: Ada has
+                sometimes been quoted as an example of this effect occurring. For C, the work that has to be done by the
+                loader is not large and the approach is a sensible one. Figure 1.1 shows the way that this works.</p>
+
+            <figure class="figure mx-auto d-block">
+                <img src="Introduction.png" class="rounded mx-auto d-block" alt="image">
+                <figcaption class="text-center my-3 mx-auto d-block">Figure 1.1. Separate compilation</figcaption>
+            </figure>
+
+            <p>This technique is important in C, where it is common to find all but the smallest of programs constructed
+                from a number of separate source files. Furthermore, the extensive use that C makes of libraries means
+                that
+                even trivial programs pass through the loader, although that might not be obvious at the first glance or
+                to
+                the newcomer</p>
+
+
+        </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+    <!--https://source.unsplash.com/200x200/?technology,programming-->
+</body>
+<footer class="py-1 my-4">
+    <ul class="nav justify-content-center border-bottom">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+    <p class="text-center text-muted">© 2021 Company, Inc</p>
+</footer>
+<!--
+<script>
+    window.onscroll=function(){scrollFunction()};
+
+    var header =document.getElementById("TOC");
+    var sticky = header.offsetTop;
+
+    function scrollFunction(){
+        if(window.pageYOffset > sticky)
+        {
+            header.classList.add("sticky");
+        }else{
+            header.classList.remove("sticky");
+        }
+</script>-->
+</html>
