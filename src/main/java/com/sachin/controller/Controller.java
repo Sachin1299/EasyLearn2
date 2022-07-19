@@ -64,11 +64,23 @@ public class Controller {
 		List<User> user = uo.findByEmailAndPassword(Email, Password);
 		if (user.isEmpty()) {
 			System.out.println("list is empty");
-			model.addAttribute("msg", "incorrect password");
-			return "Home";
+			model.addAttribute("msg", "Incorrect Password !!!");
+			return "incorrectPassword";
 		} else {
 			System.out.println("list is not empty");
 			return "C/An Introduction to C/TheFormOfACProgram";
 		}
+	}
+	
+	@GetMapping("about")
+	public String about()
+	{
+		return "about";
+	}
+	
+	@GetMapping("contact")
+	public String contact()
+	{
+		return "Contact";
 	}
 }

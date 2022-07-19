@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+	crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@500&family=Bungee&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<title>Java:Varibles</title>
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand hadingfont" href="/home">EasyLearn</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link " aria-current="page"
+						href="/home">Home</a></li>
+					<li class="nav-item dropdown ps-3 pe-3"><a
+						class="nav-link dropdown-toggle active" href="#"
+						id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+						aria-expanded="false"> Java </a>
+						<ul class="dropdown-menu dropdown-menu-dark"
+							aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="/TheFormOfACProgram">C</a></li>
+							<li><a class="dropdown-item" href="/TheFormOfACProgram">C++</a></li>
+							<li><a class="dropdown-item" href="/Introduction">Java</a></li>
+							<li><a class="dropdown-item" href="Python/Introduction.html">Python</a></li>
+						</ul></li>
+					<li class="nav-item"><a class="nav-link " aria-current="page"
+						href="/about">About</a></li>
+					<li class="nav-item"><a class="nav-link   "
+						aria-current="page" href="/contact">Contact</a></li>
+				</ul>
+				<form class="d-flex">
+					<input class="form-control me-2" type="search" placeholder="Search"
+						aria-label="Search">
+					<button class="btn btn-outline-success" type="submit">Search</button>
+				</form>
+				<div class="mx-2">
+					<button type="button" class="btn btn-danger ">Log Out</button>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<aside id="asidebar" class="oldheight">
+		<nav>
+			<h3 id="TOC" class="hadingfont text-center">Table of Contents</h3>
+			<ul class="list-group tableofcontent">
+				<li><a href="/Introduction"
+					class="d-inline-flex align-items-center rounded ">
+						An Introduction to Java</a>
+					<ul>
+						<li><a href="/Hello World"
+							class="d-inline-flex align-items-center rounded "> Hello
+								World program</a></li>
+						<li><a href="/JVM-JDK-JRE"
+							class="d-inline-flex align-items-center rounded "> JVM, JRE
+								and JDK</a></li>
+						<li><a href="/Variables"
+							class="d-inline-flex align-items-center rounded currenttopic">Variables </a>
+						</li>
+						<li><a href="/DataTypes"
+							class="d-inline-flex align-items-center rounded "> Data Types</a></li>
+						<li><a href="/Operators"
+							class="d-inline-flex align-items-center rounded"> Operators</a></li>
+						<li><a href="/InputAndOutput"
+							class="d-inline-flex align-items-center rounded"> Input and
+								Output</a></li>
+						<li><a href="/ExpressionsAndBlocks"
+							class="d-inline-flex align-items-center rounded"> Expressions
+								& Blocks</a></li>
+						<li><a href="/Comments"
+							class="d-inline-flex align-items-center rounded"> Comment</a></li>
+					</ul></li>
+				<li><a href="/FlowControl"
+					class="d-inline-flex align-items-center rounded">Flow Control</a>
+					<ul>
+						<li><a
+							href="/If-Else"
+							class="d-inline-flex align-items-center rounded">if...else</a></li>
+						<li><a href="/SwitchStatement"
+							class="d-inline-flex align-items-center rounded">Switch
+								Statement</a></li>
+						<li><a
+							href="/ForLoop"
+							class="d-inline-flex align-items-center rounded">For Loop</a></li>
+						<li><a
+							href="/ForEachLoop"
+							class="d-inline-flex align-items-center rounded">For-each
+								Loop</a></li>
+						<li><a
+							href="/WhileLoop"
+							class="d-inline-flex align-items-center rounded">While Loop</a></li>
+						<li><a href="/BreakStatements"
+							class="d-inline-flex align-items-center rounded">Break
+								Statement</a></li>
+						<li><a href="/ContinueStatement"
+							class="d-inline-flex align-items-center rounded">Continue
+								Statement</a></li>
+					</ul></li>
+				<li><a
+					href="../Control of Flow and Logical Expressions/TheTaskAhead.html"
+					class="d-inline-flex align-items-center rounded"> Array</a>
+					<ul>
+						<li><a
+							href="../Control of Flow and Logical Expressions/TheTaskAhead.html"
+							class="d-inline-flex align-items-center rounded">Java Array</a></li>
+						<li><a
+							href="../Control of Flow and Logical Expressions/ControlOfFlow.html"
+							class="d-inline-flex align-items-center rounded">Multidimentional
+								Array</a></li>
+						<li><a
+							href="../Control of Flow and Logical Expressions/MoreLogicalExpressions.html"
+							class="d-inline-flex align-items-center rounded">Copy Array</a></li>
+					</ul></li>
+				<li><a href="../Functions/Changes.html"
+					class="d-inline-flex align-items-center rounded"> OOPS Concept</a>
+					<ul>
+						<li><a href="../Functions/Changes.html"
+							class="d-inline-flex align-items-center rounded"> Classes and
+								Objects </a></li>
+						<li><a href="../Functions/TheTypeOfFunctions.html"
+							class="d-inline-flex align-items-center rounded"> Methods</a></li>
+						<li><a href="../Functions/RecursionAndArgumentPassing.html"
+							class="d-inline-flex align-items-center rounded"> Access
+								Modifiers</a></li>
+						<li><a href="../Functions/Linkage.html"
+							class="d-inline-flex align-items-center rounded"> Wrapper
+								Classes</a></li>
+						<li><a href="../Functions/Summery.html"
+							class="d-inline-flex align-items-center rounded"> Need of
+								Wrapper Classes</a></li>
+					</ul></li>
+				<li><a href="../Arrays and Pointers/OpeningShots.html"
+					class="d-inline-flex align-items-center rounded"> Java
+						Exception Handling</a>
+					<ul>
+						<li><a href="../Arrays and Pointers/OpeningShots.html"
+							class="d-inline-flex align-items-center rounded">Exception</a></li>
+						<li><a href="../Arrays and Pointers/Arrays.html"
+							class="d-inline-flex align-items-center rounded">Exception
+								Handling</a></li>
+						<li><a href="../Arrays and Pointers/Pointers.html"
+							class="d-inline-flex align-items-center rounded">try-catch</a></li>
+						<li><a href="../Arrays and Pointers/CharacterHandling.html"
+							class="d-inline-flex align-items-center rounded">throw and
+								throws</a></li>
+						<li><a
+							href="../Arrays and Pointers/SizeofAndStorageAllocation.html"
+							class="d-inline-flex align-items-center rounded">Catch
+								Multiple Exceptions</a></li>
+						<li><a href="../Arrays and Pointers/PointersToFunction.html"
+							class="d-inline-flex align-items-center rounded">Try with
+								resources</a></li>
+						<li><a
+							href="../Arrays and Pointers/ExpressionInvolvingPointers.html"
+							class="d-inline-flex align-items-center rounded">Annotations</a></li>
+						<li><a
+							href="../Arrays and Pointers/ArraysThe&OperatorAndFunctionDeclaration.html"
+							class="d-inline-flex align-items-center rounded">Annotation
+								Types</a></li>
+						<li><a href="../Arrays and Pointers/Summary.html"
+							class="d-inline-flex align-items-center rounded">Logging</a></li>
+						<li><a href="../Arrays and Pointers/Exercises.html"
+							class="d-inline-flex align-items-center rounded">Assertions</a></li>
+					</ul></li>
+				<li><a href="../Structured Data Types/History.html"
+					class="d-inline-flex align-items-center rounded"> List</a>
+					<ul>
+						<li><a href="../Structured Data Types/History.html"
+							class="d-inline-flex align-items-center rounded">Collections
+								Framework</a></li>
+						<li><a href="../Structured Data Types/Structure.html"
+							class="d-inline-flex align-items-center rounded">Collection
+								Interface</a></li>
+						<li><a href="../Structured Data Types/Unions.html"
+							class="d-inline-flex align-items-center rounded">List
+								Interface</a></li>
+						<li><a href="../Structured Data Types/Bitfields.html"
+							class="d-inline-flex align-items-center rounded">ArrayList</a></li>
+						<li><a href="../Structured Data Types/Enums.html"
+							class="d-inline-flex align-items-center rounded">Vector</a></li>
+						<li><a
+							href="../Structured Data Types/QualifiersAndDerivedTypes.html"
+							class="d-inline-flex align-items-center rounded">Stack</a></li>
+					</ul></li>
+				<li><a href="../The Preprocessor/EffectOfTheStandard.html"
+					class="d-inline-flex align-items-center rounded">Queue</a>
+					<ul>
+						<li><a href="../The Preprocessor/EffectOfTheStandard.html"
+							class="d-inline-flex align-items-center rounded">Queue
+								Interface</a></li>
+						<li><a
+							href="../The Preprocessor/HowThePreProcessorWorks.html"
+							class="d-inline-flex align-items-center rounded">PriorityQueue</a>
+						</li>
+						<li><a href="../The Preprocessor/Directives.html"
+							class="d-inline-flex align-items-center rounded">Deque
+								Interface</a></li>
+						<li><a href="../The Preprocessor/Summary.html"
+							class="d-inline-flex align-items-center rounded">ArrayDeque</a></li>
+						<li><a href="../The Preprocessor/Exercises.html"
+							class="d-inline-flex align-items-center rounded">BlockingQueue
+								Interface</a></li>
+						<li><a href="../The Preprocessor/Exercises.html"
+							class="d-inline-flex align-items-center rounded">ArrayBlockingQueue
+						</a></li>
+						<li><a href="../The Preprocessor/Exercises.html"
+							class="d-inline-flex align-items-center rounded">LinkedBlockingQueue</a></li>
+					</ul></li>
+				<li><a
+					href="../Specialized Areas of C/GovermentHealthWarning.html"
+					class="d-inline-flex align-items-center rounded"> Java Map</a>
+					<ul>
+						<li><a
+							href="../Specialized Areas of C/GovermentHealthWarning.html"
+							class="d-inline-flex align-items-center rounded">Map
+								Interface</a></li>
+						<li><a
+							href="../Specialized Areas of C/DeclarationDefinationAndAccessibility.html"
+							class="d-inline-flex align-items-center rounded">HashMap</a></li>
+						<li><a href="../Specialized Areas of C/Typedef.html"
+							class="d-inline-flex align-items-center rounded">LinkedHashMap</a>
+						</li>
+						<li><a href="../Specialized Areas of C/ConstAndVolatile.html"
+							class="d-inline-flex align-items-center rounded">WeakHashMap</a></li>
+						<li><a href="../Specialized Areas of C/SequencePoints.html"
+							class="d-inline-flex align-items-center rounded">EnumMap</a></li>
+						<li><a href="../Specialized Areas of C/Summary.html"
+							class="d-inline-flex align-items-center rounded">TreeMap</a></li>
+					</ul></li>
+				<li><a href="../Libraries/Introduction.html"
+					class="d-inline-flex align-items-center rounded"> Java Set</a>
+					<ul>
+						<li><a href="../Libraries/Introduction.html"
+							class="d-inline-flex align-items-center rounded">Java Set
+								Interface</a></li>
+						<li><a href="../Libraries/Diagnostics.html"
+							class="d-inline-flex align-items-center rounded">HashSet</a></li>
+						<li><a href="../Libraries/CharacterHandling.html"
+							class="d-inline-flex align-items-center rounded">LinkedhashSet</a></li>
+						<li><a href="../Libraries/Localization.html"
+							class="d-inline-flex align-items-center rounded">TreeSet</a></li>
+						<li><a href="../Libraries/Limits.html"
+							class="d-inline-flex align-items-center rounded">Algorithms</a></li>
+						<li><a href="../Libraries/MathematicalFunction.html"
+							class="d-inline-flex align-items-center rounded">Iterator</a></li>
+						<li><a href="../Libraries/Non-LocalJumps.html"
+							class="d-inline-flex align-items-center rounded">ListIterator</a></li>
+					</ul></li>
+				<li><a href="../Complete Programs in C/PutItAllTogether.html"
+					class="d-inline-flex align-items-center rounded"> Java I/O
+						Streams</a>
+					<ul>
+						<li><a href="../Complete Programs in C/PutItAllTogether.html"
+							class="d-inline-flex align-items-center rounded">I/O Streams</a>
+						</li>
+						<li><a href="../Complete Programs in C/ArgumentToMain.html"
+							class="d-inline-flex align-items-center rounded">InputStream</a></li>
+						<li><a
+							href="../Complete Programs in C/InterpretingProgramArguments.html"
+							class="d-inline-flex align-items-center rounded">OutputStream</a></li>
+						<li><a
+							href="../Complete Programs in C/APatternMatchingProgram.html"
+							class="d-inline-flex align-items-center rounded">FileInputStream</a>
+						</li>
+						<li><a
+							href="../Complete Programs in C/AMoreAmbitiousExample.html"
+							class="d-inline-flex align-items-center rounded">FileOutputStream</a>
+						</li>
+						<li><a href="../Complete Programs in C/Afterword.html"
+							class="d-inline-flex align-items-center rounded">PrintStream</a></li>
+					</ul></li>
+				<li><a href="../Complete Programs in C/PutItAllTogether.html"
+					class="d-inline-flex align-items-center rounded"> Java
+						Reader/Writer</a>
+					<ul>
+						<li><a href="../Complete Programs in C/PutItAllTogether.html"
+							class="d-inline-flex align-items-center rounded">Reader</a></li>
+						<li><a href="../Complete Programs in C/ArgumentToMain.html"
+							class="d-inline-flex align-items-center rounded">Writer</a></li>
+						<li><a
+							href="../Complete Programs in C/InterpretingProgramArguments.html"
+							class="d-inline-flex align-items-center rounded">FileReader</a></li>
+						<li><a
+							href="../Complete Programs in C/APatternMatchingProgram.html"
+							class="d-inline-flex align-items-center rounded">FileWriter</a></li>
+						<li><a
+							href="../Complete Programs in C/AMoreAmbitiousExample.html"
+							class="d-inline-flex align-items-center rounded">BufferedReader</a>
+						</li>
+						<li><a href="../Complete Programs in C/Afterword.html"
+							class="d-inline-flex align-items-center rounded">BufferedWriter</a></li>
+					</ul></li>
+			</ul>
+		</nav>
+	</aside>
+	<div style="font-size: 18px; margin-left: 28%;">
+
+		<h1 class="text-center hadingfont p-2">Variables and Literals</h1>
+
+		<h3>Java Variables</h3>
+
+		<p>A variable is a location in memory (storage area) to hold data.</p>
+		<p>To indicate the storage area, each variable should be given a
+			unique name (identifier).</p>
+
+		<h3>Create Variables in Java</h3>
+
+		<p>Here's how we create a variable in Java,</p>
+		<pre>int speedLimit = 80;</pre>
+
+
+		<p>Here, speedLimit is a variable of int data type and we have
+			assigned value 80 to it.</p>
+		<p>The int data type suggests that the variable can only hold
+			integers.</p>
+		<p>In the example, we have assigned value to the variable during
+			declaration. However, it's not mandatory.</p>
+		<p>You can declare variables and assign variables separately. For
+			example,</p>
+		<pre>int speedLimit;
+   speedLimit = 80;</pre>
+		<p>
+			<b>Note:</b>Java is a statically-typed language. It means that all
+			variables must be declared before they can be used.
+		</p>
+		<h3>Change values of variables</h3>
+
+		<p>The value of a variable can be changed in the program, hence
+			the name variable. For example,</p>
+
+		<pre>int speedLimit = 80;
+			... .. ...
+			speedLimit = 70;</pre>
+
+		<p>Here, initially, the value of speedLimit is 80. Later, we
+			changed it to 70.</p>
+		<p>However, we cannot change the data type of a variable in Java
+			within the same scope.</p>
+		<h3>Rules for Naming Variables in Java</h3>
+		<p>Java programming language has its own set of rules and
+			conventions for naming variables. Here's what you need to know:</p>
+		<ul>
+			<li>Java is case sensitive. Hence, age and AGE are two different
+				variables. For example, <pre>
+		        int age = 24;
+			int AGE = 26;
+			
+			System.out.println(age);
+			System.out.println(AGE);</pre>
+			</li>
+			<li>Variables must start with either a letter or an underscore,
+				_ or a dollar, $ sign. For example, <pre>
+		        int age; //Valid Variable
+			int ^age;  //Non Valid Variable
+			int 4age;  //Non Valid Variable
+			int age2;  //Valid Variable</pre>
+			</li>
+			<li>Variable names cannot start with numbers. For example, <pre>
+			int 45abc; //Non Valid
+			int 0abc;  //Non Valid
+			int abd0;  //Valid</pre></li>
+			<li>Variable names can't use whitespace. For example, 
+			<pre>
+			int my variable = 15; //Non Valid
+			int myVariable = 15;  //Valid</pre> Here, is we need to use variable names
+				having more than one word, use all lowercase letters for the first
+				word and capitalize the first letter of each subsequent word. For
+				example, myVariable.
+			</li>
+		</ul>
+		
+		<h3>Types Of Variables</h3>
+		<ul>
+		<li>Instance Variables (Non-Static Fields)</li>
+		<li>Class Variables (Static Fields)</li>
+		<li>Local Variables</li>
+		<li>Parameters</li>
+		</ul>
+		
+		<h3>Java literals</h3>
+		<p>Literals are data used for representing fixed values. They can be used directly in the code. For example,</p>
+		<pre>
+		int a = 1;
+                float b = 2.5;
+                char c = 'F';
+</pre>
+<p>Here, 1, 2.5, and 'F' are literals.</p>
+<p><b>Here are different types of literals in Java.</b></p>
+<h3>1. Boolean Literals</h3>
+<p>In Java, boolean literals are used to initialize boolean data types. They can store two values: true and false. For example,</p>
+<pre>boolean flag1 = false;
+boolean flag2 = true;</pre>
+<p>Here, false and true are two boolean literals.</p>
+
+<h3>2.Integer Literals</h3>
+<p>An integer literal is a numeric value(associated with numbers) without any fractional or exponential part. There are 4 types of integer literals in Java:<br>
+1.binary (base 2)<br>
+2.decimal (base 10)<br>
+3.octal (base 8)<br>
+4.hexadecimal (base 16)<br>
+</p>
+<pre>
+// binary
+int binaryNumber = 0b10010;
+// octal 
+int octalNumber = 027;
+
+// decimal
+int decNumber = 34;
+
+// hexadecimal 
+int hexNumber = 0x2F; // 0x represents hexadecimal
+// binary
+int binNumber = 0b10010; // 0b represents binary
+</pre>
+<p>In Java, binary starts with 0b, octal starts with 0, and hexadecimal starts with 0x.</p>
+
+<p><b>Note:</b> Integer literals are used to initialize variables of integer types like byte, short, int, and long.</p>
+
+<h3>3. Floating-point Literals</h3>
+<p>A floating-point literal is a numeric literal that has either a fractional form or an exponential form. For example,</p>
+<pre>
+class Main {
+  public static void main(String[] args) {
+    	
+    double myDouble = 3.4;
+    float myFloat = 3.4F;
+ 
+    // 3.445*10^2
+    double myDoubleScientific = 3.445e2;
+
+    System.out.println(myDouble);  // prints 3.4
+    System.out.println(myFloat);    // prints 3.4
+    System.out.println(myDoubleScientific);   // prints 344.5
+  }
+}
+</pre>
+<p><b>Note:</b> The floating-point literals are used to initialize float and double type variables.</p>
+
+<h3>4. Character Literals</h3>
+<p>Character literals are unicode character enclosed inside single quotes. For example,</p>
+<pre>
+char letter = 'a';
+</pre>
+<p>char letter = 'a';</p>
+<p>We can also use escape sequences as character literals. For example, \b (backspace), \t (tab), \n (new line), etc.</p>
+<h3>5. String literals</h3>
+<p>A string literal is a sequence of characters enclosed inside double-quotes. For example,</p>
+<pre>
+String str1 = "Java Programming";
+String str2 = "Programiz";
+</pre>
+<p>Here, Java Programming and Programiz are two string literals.</p>
+
+	</div>
+	<div class="d-grid gap-4 d-md-block"
+		style="margin-left: 374px; margin-bottom: 9px;">
+		<a href="/JVM-JDK-JRE">
+			<button id="prev" onmouseenter=mouseevent();
+				onmouseleave=mouseleave(); class="btn btn-outline-primary"
+				style="width: 166px; height: 44px;" type="button">Previous</button>
+		</a> <a href="/DataTypes">
+			<button onmouseenter=mouseevent1(); onmouseleave=mouseleave1();
+				class="btn btn-outline-primary" id="next"
+				style="margin-left: 64%; width: 166px; height: 44px;" type="button">Next</button>
+		</a>
+	</div>
+
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
+	<script src="func.js"></script>
+
+
+	<!--https://source.unsplash.com/200x200/?technology,programming-->
+</body>
+<footer class="" style="width: 100%;">
+	<ul class="nav justify-content-center border-bottom">
+		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+	</ul>
+	<p class="text-center text-muted">© 2021 Company, Inc</p>
+</footer>
+
+</html>

@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+	crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@500&family=Bungee&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<title>Java Operators</title>
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand hadingfont" href="/home">EasyLearn</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link " aria-current="page"
+						href="/home">Home</a></li>
+					<li class="nav-item dropdown ps-3 pe-3"><a
+						class="nav-link dropdown-toggle active" href="#"
+						id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+						aria-expanded="false"> Java </a>
+						<ul class="dropdown-menu dropdown-menu-dark"
+							aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="/TheFormOfACProgram">C</a></li>
+							<li><a class="dropdown-item" href="/TheFormOfACProgram">C++</a></li>
+							<li><a class="dropdown-item" href="/Introduction">Java</a></li>
+							<li><a class="dropdown-item" href="Python/Introduction.html">Python</a></li>
+						</ul></li>
+					<li class="nav-item"><a class="nav-link " aria-current="page"
+						href="/about">About</a></li>
+					<li class="nav-item"><a class="nav-link   "
+						aria-current="page" href="/contact">Contact</a></li>
+				</ul>
+				<form class="d-flex">
+					<input class="form-control me-2" type="search" placeholder="Search"
+						aria-label="Search">
+					<button class="btn btn-outline-success" type="submit">Search</button>
+				</form>
+				<div class="mx-2">
+					<button type="button" class="btn btn-danger ">Log Out</button>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<aside id="asidebar" class="oldheight">
+		<nav>
+			<h3 id="TOC" class="hadingfont text-center">Table of Contents</h3>
+			<ul class="list-group tableofcontent">
+				<li><a href="/Introduction"
+					class="d-inline-flex align-items-center rounded "> An
+						Introduction to Java</a>
+					<ul>
+						<li><a href="/Hello World"
+							class="d-inline-flex align-items-center rounded "> Hello
+								World program</a></li>
+						<li><a href="/JVM-JDK-JRE"
+							class="d-inline-flex align-items-center rounded "> JVM, JRE
+								and JDK</a></li>
+						<li><a href="/Variables"
+							class="d-inline-flex align-items-center rounded ">Variables </a>
+						</li>
+						<li><a href="/DataTypes"
+							class="d-inline-flex align-items-center rounded "> Data Types</a></li>
+						<li><a href="/Operators"
+							class="d-inline-flex align-items-center rounded currenttopic">
+								Operators</a></li>
+						<li><a href="/InputAndOutput"
+							class="d-inline-flex align-items-center rounded"> Input and
+								Output</a></li>
+						<li><a href="/ExpressionsAndBlocks"
+							class="d-inline-flex align-items-center rounded"> Expressions
+								& Blocks</a></li>
+						<li><a href="/Comments"
+							class="d-inline-flex align-items-center rounded"> Comment</a></li>
+					</ul></li>
+				<li><a href="/FlowControl"
+					class="d-inline-flex align-items-center rounded">Flow Control</a>
+					<ul>
+						<li><a href="/If-Else"
+							class="d-inline-flex align-items-center rounded">if...else</a></li>
+						<li><a href="/SwitchStatement"
+							class="d-inline-flex align-items-center rounded">Switch
+								Statement</a></li>
+						<li><a href="/ForLoop"
+							class="d-inline-flex align-items-center rounded">For Loop</a></li>
+						<li><a href="/ForEachLoop"
+							class="d-inline-flex align-items-center rounded">For-each
+								Loop</a></li>
+						<li><a href="/WhileLoop"
+							class="d-inline-flex align-items-center rounded">While Loop</a></li>
+						<li><a href="/BreakStatements"
+							class="d-inline-flex align-items-center rounded">Break
+								Statement</a></li>
+						<li><a href="/ContinueStatement"
+							class="d-inline-flex align-items-center rounded">Continue
+								Statement</a></li>
+					</ul></li>
+				<li><a
+					href="../Control of Flow and Logical Expressions/TheTaskAhead.html"
+					class="d-inline-flex align-items-center rounded"> Array</a>
+					<ul>
+						<li><a
+							href="../Control of Flow and Logical Expressions/TheTaskAhead.html"
+							class="d-inline-flex align-items-center rounded">Java Array</a></li>
+						<li><a
+							href="../Control of Flow and Logical Expressions/ControlOfFlow.html"
+							class="d-inline-flex align-items-center rounded">Multidimentional
+								Array</a></li>
+						<li><a
+							href="../Control of Flow and Logical Expressions/MoreLogicalExpressions.html"
+							class="d-inline-flex align-items-center rounded">Copy Array</a></li>
+					</ul></li>
+				<li><a href="../Functions/Changes.html"
+					class="d-inline-flex align-items-center rounded"> OOPS Concept</a>
+					<ul>
+						<li><a href="../Functions/Changes.html"
+							class="d-inline-flex align-items-center rounded"> Classes and
+								Objects </a></li>
+						<li><a href="../Functions/TheTypeOfFunctions.html"
+							class="d-inline-flex align-items-center rounded"> Methods</a></li>
+						<li><a href="../Functions/RecursionAndArgumentPassing.html"
+							class="d-inline-flex align-items-center rounded"> Access
+								Modifiers</a></li>
+						<li><a href="../Functions/Linkage.html"
+							class="d-inline-flex align-items-center rounded"> Wrapper
+								Classes</a></li>
+						<li><a href="../Functions/Summery.html"
+							class="d-inline-flex align-items-center rounded"> Need of
+								Wrapper Classes</a></li>
+					</ul></li>
+				<li><a href="../Arrays and Pointers/OpeningShots.html"
+					class="d-inline-flex align-items-center rounded"> Java
+						Exception Handling</a>
+					<ul>
+						<li><a href="../Arrays and Pointers/OpeningShots.html"
+							class="d-inline-flex align-items-center rounded">Exception</a></li>
+						<li><a href="../Arrays and Pointers/Arrays.html"
+							class="d-inline-flex align-items-center rounded">Exception
+								Handling</a></li>
+						<li><a href="../Arrays and Pointers/Pointers.html"
+							class="d-inline-flex align-items-center rounded">try-catch</a></li>
+						<li><a href="../Arrays and Pointers/CharacterHandling.html"
+							class="d-inline-flex align-items-center rounded">throw and
+								throws</a></li>
+						<li><a
+							href="../Arrays and Pointers/SizeofAndStorageAllocation.html"
+							class="d-inline-flex align-items-center rounded">Catch
+								Multiple Exceptions</a></li>
+						<li><a href="../Arrays and Pointers/PointersToFunction.html"
+							class="d-inline-flex align-items-center rounded">Try with
+								resources</a></li>
+						<li><a
+							href="../Arrays and Pointers/ExpressionInvolvingPointers.html"
+							class="d-inline-flex align-items-center rounded">Annotations</a></li>
+						<li><a
+							href="../Arrays and Pointers/ArraysThe&OperatorAndFunctionDeclaration.html"
+							class="d-inline-flex align-items-center rounded">Annotation
+								Types</a></li>
+						<li><a href="../Arrays and Pointers/Summary.html"
+							class="d-inline-flex align-items-center rounded">Logging</a></li>
+						<li><a href="../Arrays and Pointers/Exercises.html"
+							class="d-inline-flex align-items-center rounded">Assertions</a></li>
+					</ul></li>
+				<li><a href="../Structured Data Types/History.html"
+					class="d-inline-flex align-items-center rounded"> List</a>
+					<ul>
+						<li><a href="../Structured Data Types/History.html"
+							class="d-inline-flex align-items-center rounded">Collections
+								Framework</a></li>
+						<li><a href="../Structured Data Types/Structure.html"
+							class="d-inline-flex align-items-center rounded">Collection
+								Interface</a></li>
+						<li><a href="../Structured Data Types/Unions.html"
+							class="d-inline-flex align-items-center rounded">List
+								Interface</a></li>
+						<li><a href="../Structured Data Types/Bitfields.html"
+							class="d-inline-flex align-items-center rounded">ArrayList</a></li>
+						<li><a href="../Structured Data Types/Enums.html"
+							class="d-inline-flex align-items-center rounded">Vector</a></li>
+						<li><a
+							href="../Structured Data Types/QualifiersAndDerivedTypes.html"
+							class="d-inline-flex align-items-center rounded">Stack</a></li>
+					</ul></li>
+				<li><a href="../The Preprocessor/EffectOfTheStandard.html"
+					class="d-inline-flex align-items-center rounded">Queue</a>
+					<ul>
+						<li><a href="../The Preprocessor/EffectOfTheStandard.html"
+							class="d-inline-flex align-items-center rounded">Queue
+								Interface</a></li>
+						<li><a
+							href="../The Preprocessor/HowThePreProcessorWorks.html"
+							class="d-inline-flex align-items-center rounded">PriorityQueue</a>
+						</li>
+						<li><a href="../The Preprocessor/Directives.html"
+							class="d-inline-flex align-items-center rounded">Deque
+								Interface</a></li>
+						<li><a href="../The Preprocessor/Summary.html"
+							class="d-inline-flex align-items-center rounded">ArrayDeque</a></li>
+						<li><a href="../The Preprocessor/Exercises.html"
+							class="d-inline-flex align-items-center rounded">BlockingQueue
+								Interface</a></li>
+						<li><a href="../The Preprocessor/Exercises.html"
+							class="d-inline-flex align-items-center rounded">ArrayBlockingQueue
+						</a></li>
+						<li><a href="../The Preprocessor/Exercises.html"
+							class="d-inline-flex align-items-center rounded">LinkedBlockingQueue</a></li>
+					</ul></li>
+				<li><a
+					href="../Specialized Areas of C/GovermentHealthWarning.html"
+					class="d-inline-flex align-items-center rounded"> Java Map</a>
+					<ul>
+						<li><a
+							href="../Specialized Areas of C/GovermentHealthWarning.html"
+							class="d-inline-flex align-items-center rounded">Map
+								Interface</a></li>
+						<li><a
+							href="../Specialized Areas of C/DeclarationDefinationAndAccessibility.html"
+							class="d-inline-flex align-items-center rounded">HashMap</a></li>
+						<li><a href="../Specialized Areas of C/Typedef.html"
+							class="d-inline-flex align-items-center rounded">LinkedHashMap</a>
+						</li>
+						<li><a href="../Specialized Areas of C/ConstAndVolatile.html"
+							class="d-inline-flex align-items-center rounded">WeakHashMap</a></li>
+						<li><a href="../Specialized Areas of C/SequencePoints.html"
+							class="d-inline-flex align-items-center rounded">EnumMap</a></li>
+						<li><a href="../Specialized Areas of C/Summary.html"
+							class="d-inline-flex align-items-center rounded">TreeMap</a></li>
+					</ul></li>
+				<li><a href="../Libraries/Introduction.html"
+					class="d-inline-flex align-items-center rounded"> Java Set</a>
+					<ul>
+						<li><a href="../Libraries/Introduction.html"
+							class="d-inline-flex align-items-center rounded">Java Set
+								Interface</a></li>
+						<li><a href="../Libraries/Diagnostics.html"
+							class="d-inline-flex align-items-center rounded">HashSet</a></li>
+						<li><a href="../Libraries/CharacterHandling.html"
+							class="d-inline-flex align-items-center rounded">LinkedhashSet</a></li>
+						<li><a href="../Libraries/Localization.html"
+							class="d-inline-flex align-items-center rounded">TreeSet</a></li>
+						<li><a href="../Libraries/Limits.html"
+							class="d-inline-flex align-items-center rounded">Algorithms</a></li>
+						<li><a href="../Libraries/MathematicalFunction.html"
+							class="d-inline-flex align-items-center rounded">Iterator</a></li>
+						<li><a href="../Libraries/Non-LocalJumps.html"
+							class="d-inline-flex align-items-center rounded">ListIterator</a></li>
+					</ul></li>
+				<li><a href="../Complete Programs in C/PutItAllTogether.html"
+					class="d-inline-flex align-items-center rounded"> Java I/O
+						Streams</a>
+					<ul>
+						<li><a href="../Complete Programs in C/PutItAllTogether.html"
+							class="d-inline-flex align-items-center rounded">I/O Streams</a>
+						</li>
+						<li><a href="../Complete Programs in C/ArgumentToMain.html"
+							class="d-inline-flex align-items-center rounded">InputStream</a></li>
+						<li><a
+							href="../Complete Programs in C/InterpretingProgramArguments.html"
+							class="d-inline-flex align-items-center rounded">OutputStream</a></li>
+						<li><a
+							href="../Complete Programs in C/APatternMatchingProgram.html"
+							class="d-inline-flex align-items-center rounded">FileInputStream</a>
+						</li>
+						<li><a
+							href="../Complete Programs in C/AMoreAmbitiousExample.html"
+							class="d-inline-flex align-items-center rounded">FileOutputStream</a>
+						</li>
+						<li><a href="../Complete Programs in C/Afterword.html"
+							class="d-inline-flex align-items-center rounded">PrintStream</a></li>
+					</ul></li>
+				<li><a href="../Complete Programs in C/PutItAllTogether.html"
+					class="d-inline-flex align-items-center rounded"> Java
+						Reader/Writer</a>
+					<ul>
+						<li><a href="../Complete Programs in C/PutItAllTogether.html"
+							class="d-inline-flex align-items-center rounded">Reader</a></li>
+						<li><a href="../Complete Programs in C/ArgumentToMain.html"
+							class="d-inline-flex align-items-center rounded">Writer</a></li>
+						<li><a
+							href="../Complete Programs in C/InterpretingProgramArguments.html"
+							class="d-inline-flex align-items-center rounded">FileReader</a></li>
+						<li><a
+							href="../Complete Programs in C/APatternMatchingProgram.html"
+							class="d-inline-flex align-items-center rounded">FileWriter</a></li>
+						<li><a
+							href="../Complete Programs in C/AMoreAmbitiousExample.html"
+							class="d-inline-flex align-items-center rounded">BufferedReader</a>
+						</li>
+						<li><a href="../Complete Programs in C/Afterword.html"
+							class="d-inline-flex align-items-center rounded">BufferedWriter</a></li>
+					</ul></li>
+			</ul>
+		</nav>
+	</aside>
+	<div style="font-size: 18px; margin-left: 28%;">
+
+		<h1 class="text-center hadingfont p-2">Operators</h1>
+
+
+		<p>In this tutorial, you'll learn about different types of
+			operators in Java, their syntax and how to use them with the help of
+			examples.</p>
+		<p>Operators are symbols that perform operations on variables and
+			values. For example, + is an operator used for addition, while * is
+			also an operator used for multiplication.</p>
+		<p>Operators in Java can be classified into 5 types:</p>
+		<ol>
+			<li>Arithmetic Operators</li>
+			<li>Assignment Operators</li>
+			<li>Relational Operators</li>
+			<li>Logical Operators</li>
+			<li>Unary Operators</li>
+			<li>Bitwise Operators</li>
+		</ol>
+		<br>
+		<h3>1. Java Arithmetic Operators</h3>
+
+		<p>Arithmetic operators are used to perform arithmetic operations
+			on variables and data. For example,</p>
+		<pre>a + b;</pre>
+
+		<p>Here, the + operator is used to add two variables a and b.
+			Similarly, there are various other arithmetic operators in Java.</p>
+
+           
+           <table class="table table-success table-striped">
+           <tr>
+           <th>Operator</th>
+           <th>Operation</th>
+           </tr>
+           <tr>
+           <td>+</td>
+           <td>Addition</td>
+           </tr>
+           <tr>
+           <td>-</td>
+           <td>Subtraction</td>
+           </tr>
+           <tr>
+           <td>*</td>
+           <td>Multiplication</td>
+           </tr>
+           <tr>
+           <td>/</td>
+           <td>Division</td>
+           </tr>
+           <tr>
+           <td>%</td>
+           <td>Modulo Operation (Remainder after division)</td>
+           </tr>
+           
+           
+           </table>
+
+         <br>
+		<p>
+			<b>Example:</b> </p>
+			
+		<pre>class Main {
+  public static void main(String[] args) {
+    
+    // declare variables
+    int a = 12, b = 5;
+
+    // addition operator
+    System.out.println("a + b = " + (a + b));
+
+    // subtraction operator
+    System.out.println("a - b = " + (a - b));
+
+    // multiplication operator
+    System.out.println("a * b = " + (a * b));
+
+    // division operator
+    System.out.println("a / b = " + (a / b));
+
+    // modulo operator
+    System.out.println("a % b = " + (a % b));
+  }
+}</pre>
+		<h3>2. Java Assignment Operators</h3>
+		<p>Assignment operators are used in Java to assign values to variables. For example,</p>
+		<p>Here, = is the assignment operator. It assigns the value on its right to the variable 
+		on its left. That is, 5 is assigned to the variable age.</p>
+		<p>Let's see some more assignment operators available in Java.</p>
+		<table class="table table-success table-striped">
+		
+           <tr>
+           <th>Operator</th>
+           <th>Example</th>
+           <th>Equivalent to</th>
+           </tr>
+           <tr>
+           <td>=</td>
+           <td>a=b;</td>
+           <td>a=b;</td>
+           </tr>
+           <tr>
+           <td>+=</td>
+           <td>a+=b;</td>
+            <td>a=a+b;</td>
+           </tr>
+           <tr>
+          <td>-=</td>
+           <td>a-=b;</td>
+           <td>a=a-b;</td>
+           </tr>
+           <tr>
+          <td>*=</td>
+           <td>a*=b;</td>
+            <td>a=a*b;</td>
+           </tr>
+             <tr>
+          <td>/=</td>
+           <td>a/=b;</td>
+            <td>a=a/b;</td>
+           </tr>
+           <tr>
+           <td>%=</td>
+           <td>a%=b;</td>
+           <td>a=a % b;</td>
+           </tr>
+           
+           </table>
+           <br>
+		<p>
+			<b>Example 2: Assignment Operators</b>
+		</p>
+		<pre>class Main {
+  public static void main(String[] args) {
+    
+    // create variables
+    int a = 4;
+    int var;
+
+    // assign value using =
+    var = a;
+    System.out.println("var using =: " + var);
+
+    // assign value using =+
+    var += a;
+    System.out.println("var using +=: " + var);
+
+    // assign value using =*
+    var *= a;
+    System.out.println("var using *=: " + var);
+  }
+}</pre>
+		<h3>3. Java Relational Operators</h3>
+		<p>Relational operators are used to check the relationship between two operands.</p>
+		<p>It returns either true or false.</p>
+		<table class="table table-success table-striped"><tbody><tr><th>Operator</th>
+				<th>Description</th>
+				<th>Example</th>
+			</tr><tr><td>==</td>
+				<td>Is Equal To</td>
+				<td>3 == 5 returns <strong>false</strong></td>
+			</tr><tr><td>!=</td>
+				<td>Not Equal To</td>
+				<td>3 != 5 returns <strong>true</strong></td>
+			</tr><tr><td>&gt;</td>
+				<td>Greater Than</td>
+				<td>3 &gt; 5 returns <strong>false</strong></td>
+			</tr><tr><td>&lt;</td>
+				<td>Less Than</td>
+				<td>3 &lt; 5 returns <strong>true</strong></td>
+			</tr><tr><td>&gt;=</td>
+				<td>Greater Than or Equal To</td>
+				<td>3 &gt;= 5 returns <strong>false</strong></td>
+			</tr><tr><td>&lt;=</td>
+				<td>Less Than or Equal To</td>
+				<td>3 &lt;= 5 returns <strong>true</strong></td>
+			</tr></tbody></table>
+			<br>
+		<p>
+			<b>Example 3: Relational Operators</b>
+		</p>
+		<pre>class Main {
+  public static void main(String[] args) {
+    
+    // create variables
+    int a = 7, b = 11;
+
+    // value of a and b
+    System.out.println("a is " + a + " and b is " + b);
+
+    // == operator
+    System.out.println(a == b);  // false
+
+    // != operator
+    System.out.println(a != b);  // true
+
+    // > operator
+    System.out.println(a > b);  // false
+
+    // < operator
+    System.out.println(a < b);  // true
+
+    // >= operator
+    System.out.println(a >= b);  // false
+
+    // <= operator
+    System.out.println(a <= b);  // true
+  }
+}</pre>
+
+		<h3>4. Java Logical Operators</h3>
+		<p>Logical operators are used to check whether an expression is true or false. They are used in decision making.</p>
+		
+		<table class="table table-success table-striped">
+		
+           <tr>
+           <th>Operator</th>
+           <th>Example</th>
+           <th>Meaning</th>
+           </tr>
+           <tr>
+           <td>&& (Logical AND)</td>
+           <td>expression1 && expression2;</td>
+           <td>true only if both expression1 and expression2 are true;</td>
+           </tr>
+           <tr>
+           <td>|| (Logical OR)</td>
+           <td>expression1 || expression2</td>
+            <td>true if either expression1 or expression2 is true</td>
+           </tr>
+           <tr>
+          <td>! (Logical NOT)</td>
+           <td>!expression</td>
+           <td>true if expression is false and vice versa</td>
+           </tr>
+           
+           </table>
+		
+		<p>
+			<b>Example 4: Logical Operators</b>
+		</p>
+		<pre>class Main {
+  public static void main(String[] args) {
+
+    // && operator
+    System.out.println((5 > 3) && (8 > 5));  // true
+    System.out.println((5 > 3) && (8 < 5));  // false
+
+    // || operator
+    System.out.println((5 < 3) || (8 > 5));  // true
+    System.out.println((5 > 3) || (8 < 5));  // true
+    System.out.println((5 < 3) || (8 < 5));  // false
+
+    // ! operator
+    System.out.println(!(5 == 3));  // true
+    System.out.println(!(5 > 3));  // false
+  }
+}</pre>
+		<h3>5. Java Unary Operators</h3>
+		<p>Unary operators are used with only one operand. For example, ++ is a 
+		unary operator that increases the value of a variable by 1. That is, 
+		++5 will return 6.</p>
+		<p>Different types of unary operators are:</p>
+		<table class="table table-success table-striped">
+		
+           <tr>
+           <th>Operator</th>
+           <th>Meaning</th>
+           </tr>
+           <tr>
+           <td>+</td>
+           <td><b>Unary plus:</b> not necessary to use since 
+           numbers are positive without using it</td>
+           </tr>
+           <tr>
+           <td>-</td>
+           <td><b>Unary minus:</b> inverts the sign of an expression</td>
+           </tr>
+           <tr>
+          <td>++</td>
+           <td><b>Increment operator:</b> increments value by 1</td>
+           </tr>
+            <tr>
+          <td>--</td>
+           <td><b>Decrement operator:</b> decrements value by 1</td>
+           </tr>
+            <tr>
+          <td>!</td>
+           <td><b>Logical complement operator:</b> inverts the value of a boolean</td>
+           </tr>
+           
+           </table>
+           <h3>Increment and Decrement Operators</h3>
+           <p>Java also provides increment and decrement operators: ++ and -- respectively. 
+           ++ increases the value of the operand by 1, while -- decrease it by 1. </p>
+		<p>
+			<b>Example 5: Increment and Decrement Operators</b>
+		</p>
+		<pre>class Main {
+  public static void main(String[] args) {
+    
+    // declare variables
+    int a = 12, b = 12;
+    int result1, result2;
+
+    // original value
+    System.out.println("Value of a: " + a);
+
+    // increment operator
+    result1 = ++a;
+    System.out.println("After increment: " + result1);
+
+    System.out.println("Value of b: " + b);
+
+    // decrement operator
+    result2 = --b;
+    System.out.println("After decrement: " + result2);
+  }
+}</pre>
+      <p>In the above program, we have used the ++ and -- operator as prefixes (++a, --b). 
+      We can also use these operators as postfix (a++, b++).</p>
+      <p>There is a slight difference when these operators are used as prefix versus when they are used as a postfix.</p>
+        <h3>6. Java Bitwise Operators</h3>
+        <p>Bitwise operators in Java are used to perform operations on individual bits.</p>
+        <p>The various bitwise operators present in Java are:</p>
+        <table class="table table-success table-striped">
+		
+           <tr>
+           <th>Operator</th>
+           <th>Description</th>
+           </tr>
+           <tr>
+           <td>~</td>
+           <td>Bitwise Complement</td>
+           </tr>
+           <tr>
+           <td><<</td>
+           <td>Left Shift</td>
+           </tr>
+           <tr>
+          <td>>></td>
+           <td>Right Shift</td>
+           </tr>
+            <tr>
+          <td>>>></td>
+           <td>Unsigned Right Shift
+           </tr>
+            <tr>
+          <td>&</td>
+           <td>Bitwise AND</td>
+           </tr>
+              <tr>
+          <td>^</td>
+           <td>Bitwise Exclusive OR</td>
+           </tr>
+           
+           </table>
+        
+		
+	</div>
+	<div class="d-grid gap-4 d-md-block"
+		style="margin-left: 374px; margin-bottom: 9px;">
+		<a href="/DataTypes">
+			<button id="prev" onmouseenter=mouseevent();
+				onmouseleave=mouseleave(); class="btn btn-outline-primary"
+				style="width: 166px; height: 44px;" type="button">Previous</button>
+		</a> <a href="/InputAndOutput">
+			<button onmouseenter=mouseevent1(); onmouseleave=mouseleave1();
+				class="btn btn-outline-primary" id="next"
+				style="margin-left: 64%; width: 166px; height: 44px;" type="button">Next</button>
+		</a>
+	</div>
+
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
+	<script src="func.js"></script>
+
+
+	<!--https://source.unsplash.com/200x200/?technology,programming-->
+</body>
+<footer class="" style="width: 100%;">
+	<ul class="nav justify-content-center border-bottom">
+		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+	</ul>
+	<p class="text-center text-muted">© 2021 Company, Inc</p>
+</footer>
+
+</html>
