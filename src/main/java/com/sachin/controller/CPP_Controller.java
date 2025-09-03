@@ -2,18 +2,64 @@ package com.sachin.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
 
 @Controller
-public class C_Controller {
-
+@RequestMapping("/C++")
+public class CPP_Controller {
 	//INTRODUCTION
 	
-	@GetMapping("/TheFormOfACProgram")
+	@GetMapping("/Introduction")
+	public String CPPIntroduction()
+	{
+
+			return "C++/Introduction/C++Introduction";
+
+	}
+	@GetMapping("/VariablesAndLiterals")
 	public String theFormOfACProgram()
 	{
-      return "C/An Introduction to C/TheFormOfACProgram";
+
+			return "C++/Introduction/Variables and Literals";
+
 	}
-	
+	@GetMapping("/BasicI/O")
+	public String BasicIO()
+	{
+
+			return "C++/Introduction/Basic IO";
+
+	}
+	@GetMapping("/Comment")
+	public String Comments()
+	{
+
+			return "C++/Introduction/Comments";
+
+	}
+	@GetMapping("/DataTypes")
+	public String DataTypes()
+	{
+
+			return "C++/Introduction/Data Types";
+
+	}
+	@GetMapping("/Operator")
+	public String Operators()
+	{
+
+			return "C++/Introduction/Operators";
+
+	}
+	@GetMapping("/TypeConversion")
+	public String TypeConversion()
+	{
+
+			return "C++/Introduction/Type Conversion";
+
+	}
+	/*
 	@GetMapping("/Summery")
 	public String summery()
 	{
@@ -116,6 +162,5 @@ public class C_Controller {
 	}
 	
 	
-	
-	
+	*/
 }

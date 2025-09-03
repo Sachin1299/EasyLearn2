@@ -1,6 +1,7 @@
 <!doctype html>
-<html  xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.thymeleaf.org ">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.thymeleaf.org ">
 
 <head>
 <!-- Required meta tags -->
@@ -22,57 +23,68 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@500&family=Bungee&display=swap"
 	rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" type="text/css" href="/CSS/style.css">
 
 <title>EasyLearn Home</title>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-	$(document).ready(function() {
-		
-		$("#username").change(function() {
-			$.ajax({
-				
-				url:'loginmessage1',
-				data:{
-					username: $("#username").val()	
-				},
-				success: function(responseText){
+$(document).ready(function () {
+
+	let emailError = true;
+	let usernameError = true;
+
+	function toggleSignupButton() {
+		if (!emailError && !usernameError) {
+			$("#Signup").prop("disabled", false);
+		} else {
+			$("#Signup").prop("disabled", true);
+		}
+	}
+
+	$("#username").change(function () {
+		$.ajax({
+			url: 'loginmessage1',
+			data: {
+				username: $("#username").val()
+			},
+			success: function (responseText) {
 				$("#usernamemsg").text(responseText);
-				 if(responseText!="")
-					 {
-					 $("#username").focus();
-					 }
-				
-				}
-				
-				
-			});
+				usernameError = responseText !== "";
+				toggleSignupButton();
+			}
 		});
-		
-		$("#inputEmail4").change(function() {
-			$.ajax({
-				
-				url:'loginmessage',
-				data:{
-					email: $("#inputEmail4").val()	
-				},
-				success: function(responseText){
-				$("#emailmsg").text(responseText);
-				 if(responseText!="")
-					 {
-					 $("#inputEmail4").focus();
-					 }
-				
-				}
-				
-				
-			});
-		});
-		
-		
-		
 	});
+
+	$("#inputEmail4").change(function () {
+		$.ajax({
+			url: 'loginmessage',
+			data: {
+				email: $("#inputEmail4").val()
+			},
+			success: function (responseText) {
+				$("#emailmsg").text(responseText);
+				emailError = responseText !== "";
+				toggleSignupButton();
+			}
+		});
+	});
+
+	// Disable signup initially
+	$("#Signup").prop("disabled", true);
+});
+	
+
+
+	window.onload = () => {
+		  const urlParams = new URLSearchParams(window.location.search);
+		  if (urlParams.has('error')) {
+		    var myModal = new bootstrap.Modal(document.getElementById('loginModal'));
+		    myModal.show(); // Show the modal automatically on error
+		  }
+		};
+
+		 
 </script>
 </head>
 
@@ -92,13 +104,13 @@
 					<li class="nav-item"><a class="nav-link active"
 						aria-current="page" href="#">Home</a></li>
 					<li class="nav-item dropdown"><a
-						class="nav-link dropdown-toggle " href="#"
-						id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-						aria-expanded="false"> Languages </a>
-						<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item"
-								href="/TheFormOfACProgram">C</a></li>
-							<li><a class="dropdown-item" href="C++\Introduction.html">C++</a></li>
+						class="nav-link dropdown-toggle " href="#" id="navbarDropdown"
+						role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Languages </a>
+						<ul class="dropdown-menu dropdown-menu-dark"
+							aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="/TheFormOfACProgram">C</a></li>
+							<li><a class="dropdown-item" href="/C++Introduction">C++</a></li>
 							<li><a class="dropdown-item" href="/Introduction">Java</a></li>
 							<li><a class="dropdown-item" href="Python/Introduction.html">Python</a></li>
 						</ul></li>
@@ -112,12 +124,21 @@
 						aria-label="Search">
 					<button class="btn btn-outline-success" type="submit">Search</button>
 				</form>
-				<div class="mx-2">
-					<button type="button" class="btn btn-primary"
+				<!-- Show when user is not logged in -->
+				<div th:if="${#httpServletRequest == null or #httpServletRequest.remoteUser == null}">
+					<button id="Login" type="button" class="btn btn-primary"
 						data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
-					<button type="button" class="btn btn-danger "
+					<button id="SignUp" type="button" class="btn btn-danger"
 						data-bs-toggle="modal" data-bs-target="#signupModal">Sign
 						Up</button>
+				</div>
+
+				<!-- Show when user is logged in -->
+				<div th:if="${#httpServletRequest != null and #httpServletRequest.remoteUser != null}">
+					<form th:action="@{/logout}" method="post">
+						<button id="LogOut" type="submit" class="btn btn-danger">Log
+							Out</button>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -138,18 +159,19 @@
 				</div>
 				<div class="modal-body">
 					<form action="login" method="post">
-						<span id="LoginMessage" th:text=${msg} > </span>
+						<div th:if="${param.error}" style="color: red;">Invalid
+							username or password</div>
+						<span id="LoginMessage" th:text=${msg}> </span>
 						<div class="mb-3">
 							<label for="exampleInputEmail1" class="form-label">Email
-								address</label> <input type="email" class="form-control"
-								id="email" name="email"
-								aria-describedby="emailHelp">
+								address</label> <input type="email" class="form-control" id="email"
+								name="email" aria-describedby="emailHelp">
 							<div id="emailHelp" class="form-text">We'll never share
 								your email with anyone else.</div>
 						</div>
 						<div class="mb-3">
-							<label for="password" class="form-label">Password</label>
-							<input type="password" name="password" class="form-control"
+							<label for="password" class="form-label">Password</label> <input
+								type="password" name="password" class="form-control"
 								id="password">
 						</div>
 						<div class="mb-3 form-check">
@@ -194,12 +216,12 @@
 						<div>
 							<label for="inputEmail4" class="form-label">Email</label> <input
 								type="email" name="email" class="form-control" id="inputEmail4">
-								<span id="emailmsg"></span>
+							<span id="emailmsg"></span>
 						</div>
 						<div class="col-md-6">
 							<label for="username" class="form-label">Username</label> <input
 								type="text" name="username" class="form-control" id="username">
-								<span id="usernamemsg"></span>
+							<span id="usernamemsg"></span>
 						</div>
 						<div class="col-md-6">
 							<label for="inputPassword4" class="form-label">Password</label> <input
@@ -217,7 +239,8 @@
 								type="text" name="city" class="form-control" id="City">
 						</div>
 						<div class="col-12">
-							<button type="submit" class="btn btn-primary">Sign up</button>
+							<button id="Signup" type="submit" class="btn btn-primary">Sign
+								up</button>
 						</div>
 					</form>
 				</div>
@@ -315,8 +338,8 @@
 						programming language which gives a clear structure to programs and
 						allows code to be reused, lowering development costs.C++ is fun
 						and easy to learn</p>
-					<a class="localtop" href=""><button type="button"
-							class=" btn btn-success btn-sm">Learn C++</button></a>
+					<a class="localtop" href="/C++/Introduction"><button
+							type="button" class=" btn btn-success btn-sm">Learn C++</button></a>
 				</div>
 				<div class="col-auto d-none d-lg-block">
 					<img class="bd-placeholder-img" width="200" height="250"
